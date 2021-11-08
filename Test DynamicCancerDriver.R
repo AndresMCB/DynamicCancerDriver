@@ -1,10 +1,13 @@
 rm(list = ls())
+install.packages("devtools")
+install.packages("tidyverse")
+devtools::install_github(repo = "AndresMCB/AMCBGeneUtils")
+devtools::install_github(repo = "AndresMCB/DynamicCancerDriver")
 
 library(DynamicCancerDriver)
 library(AMCBGeneUtils)
 library(tidyverse)
 #### ----- Load Single Cell Data ------ ####
-
 # pre-processed Single Cell data, GSE75688
 # Genes not expressed in a least 20% of the dataset were removed.
 # afterwards, only samples from tumor were kept

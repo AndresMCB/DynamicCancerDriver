@@ -3,7 +3,7 @@ findDCD <- function(GeneExpression, z=NULL, pathCovariate =NULL
                     , PPItop = 0.3, alpha=0.05, CIniter=200
                     , returnModel=F, elbo_tol=1e-3){
 
-#---- Function for validating pseudotime vector (if provided) ----
+  #---- Function for validating pseudotime vector (if provided) ----
   z_validate <- function(z){
     valid <- FALSE
     if(!is.null(z)){
@@ -23,7 +23,7 @@ findDCD <- function(GeneExpression, z=NULL, pathCovariate =NULL
     return(z)
   }
 
-#---- pathCovariate_validate: Function to verify if the pathCovariate is valid  ----
+  #---- pathCovariate_validate: Function to verify if the pathCovariate is valid  ----
   pathCovariate_validate <- function(covariate){
     covariate <- as.matrix(covariate)
     n <- nrow(covariate)
@@ -52,17 +52,17 @@ findDCD <- function(GeneExpression, z=NULL, pathCovariate =NULL
     }
     return(covariate)
   }
-#---- If path covariate is categorical, event when pseudotime change its sign ----
+  #---- If path covariate is categorical, event when pseudotime change its sign ----
   eventAtZero <- function(z){
     z <- as.matrix(z,ncol=1)
     eventAt <- which(z[order(data.matrix(z)),1] >= 0)[1]
     return(list(eventAt=eventAt, z=z))
   }
 
-#---- function to find the event (only for numerical path covariates)
- DCD.findEvent <- function(z, GeneExpression, pathCovariate.name, Step=Step){
+  #---- function to find the event (only for numerical path covariates)
+  DCD.findEvent <- function(z, GeneExpression, pathCovariate.name, Step=Step){
     sControl <- findSyntheticControl(GeneExpression = GeneExpression
-                              , FS = pathCovariate.name)
+                                     , FS = pathCovariate.name)
 
     if(!require(parallel))
       install.packages("parallel")
@@ -119,10 +119,7 @@ findDCD <- function(GeneExpression, z=NULL, pathCovariate =NULL
     res <- which(sapply(CausalImp
                         , function(x){all(x["p"]<alpha)}))
 
-    #res <- sapply(CausalImp[res],function(x){abs(x[1,"AbsEffect"])})
-    #res <- sapply(CausalImp[res],function(x){x[1,"AbsEffect"]})
     res <- sapply(CausalImp[res],function(x){abs(x[1,"RelEffect"])})
-    #res <- sapply(CausalImp[res],function(x){x[1,"RelEffect"]})
 
     res <- names(res)[which(res==max(res))]
     return(list(eventAt=as.numeric(res[1]), z=z))
@@ -137,7 +134,7 @@ findDCD <- function(GeneExpression, z=NULL, pathCovariate =NULL
       BiocManager::install("phenopath")
     }
     library(phenopath)
-      exprs_obj <- GeneExpression%>%
+    exprs_obj <- GeneExpression%>%
       dplyr::select(all_of(FS))%>%
       transmute_all(as.numeric)
 
@@ -155,7 +152,7 @@ findDCD <- function(GeneExpression, z=NULL, pathCovariate =NULL
 
 
   #############--------  MAIN FUNCTION CODE  --------#############
-
+  use_r("findDCD")
   GeneExpression <-dplyr::as_tibble(GeneExpression, rownames=NA)  #to keep rownames
   PPIrank <- CreatePPIRank(colnames(GeneExpression))
   temp <- PPIrank%>%
@@ -176,9 +173,9 @@ findDCD <- function(GeneExpression, z=NULL, pathCovariate =NULL
          pathCovariate.isNum <-  all(sapply(pathCovariate, is.numeric))
          if(pathCovariate.isNum)
            event <- DCD.findEvent(z = z
-                                 ,GeneExpression = GeneExpression
-                                 ,pathCovariate.name = colnames(pathCovariate)
-                                 ,Step =Step)
+                                  ,GeneExpression = GeneExpression
+                                  ,pathCovariate.name = colnames(pathCovariate)
+                                  ,Step =Step)
          else
            event <- eventAtZero(z)
          }
@@ -198,9 +195,9 @@ findDCD <- function(GeneExpression, z=NULL, pathCovariate =NULL
          pathCovariate.isNum <-  all(sapply(pathCovariate, is.numeric))
          if(pathCovariate.isNum)
            event <- DCD.findEvent(z = z
-                                 ,GeneExpression = GeneExpression
-                                 ,pathCovariate.name = colnames(pathCovariate)
-                                 ,Step =Step)
+                                  ,GeneExpression = GeneExpression
+                                  ,pathCovariate.name = colnames(pathCovariate)
+                                  ,Step =Step)
          else
            event <- eventAtZero(z)}
          #default
@@ -218,11 +215,9 @@ findDCD <- function(GeneExpression, z=NULL, pathCovariate =NULL
   if(returnModel){
     CD <- names(which(sapply(CausalImp
                              , function(x){all(x[["summary"]]["p"]<alpha)})))
-    # p.val <- sapply(CausalImp[CD], function(x){x[["summary"]][1,"p"]})
   }else{
     CD <- names(which(sapply(CausalImp
                              , function(x){all(x["p"]<alpha)})))
-    #  p.val <- sapply(CausalImp[CD], function(x){x[1,"p"]})
   }
 
   if("patient"%in%colnames(GeneExpression)){
