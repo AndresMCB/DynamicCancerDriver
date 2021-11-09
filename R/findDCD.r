@@ -152,7 +152,7 @@ findDCD <- function(GeneExpression, z=NULL, pathCovariate =NULL
 
 
   #############--------  MAIN FUNCTION CODE  --------#############
-  use_r("findDCD")
+  #use_r("findDCD")
   GeneExpression <-dplyr::as_tibble(GeneExpression, rownames=NA)  #to keep rownames
   PPIrank <- CreatePPIRank(colnames(GeneExpression))
   temp <- PPIrank%>%
