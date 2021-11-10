@@ -152,7 +152,6 @@ findDCD <- function(GeneExpression, z=NULL, pathCovariate =NULL
 
 
   #############--------  MAIN FUNCTION CODE  --------#############
-  #use_r("findDCD")
   GeneExpression <-dplyr::as_tibble(GeneExpression, rownames=NA)  #to keep rownames
   PPIrank <- CreatePPIRank(colnames(GeneExpression))
   temp <- PPIrank%>%
@@ -245,6 +244,8 @@ findDCD <- function(GeneExpression, z=NULL, pathCovariate =NULL
 
   CDinfer <- CDinfer%>%
     arrange(desc(rank),desc(RelEffect))
+  CDinfer <- cbind(AMCBGeneUtils::changeGeneId(CDinfer[,1])
+                   ,CDinfer[,-1])
 
   data(CGC.driverNames)
   nCD <- length(CD)
@@ -252,9 +253,6 @@ findDCD <- function(GeneExpression, z=NULL, pathCovariate =NULL
                               ,CD))
   nFSconf <- length(intersect(CGC.driverNames$Ensembl.ID
                               ,FS))
-  phyper <- phyper(nCDconf-1, nFSconf
-                   , length(FS)-nFSconf
-                   , nCD, lower.tail = F, log.p = FALSE)
 
   summary <- matrix(
     c("Covariant(s) ptime: " ,colnames(pathCovariate)
@@ -264,7 +262,6 @@ findDCD <- function(GeneExpression, z=NULL, pathCovariate =NULL
       ,"nFSconf", nFSconf
       ,"inferred" ,nCD
       ,"Confirmed" ,nCDconf
-      ,"phyper", phyper
       ,"percentage",100*nCDconf/nCD
     ), ncol =2, byrow = T)
 

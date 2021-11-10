@@ -1,12 +1,26 @@
+#### ----- Script to test DynamicCancerDriver package ------ ####
+#
+#  This script follows the procedure described in the
+#  Bioinformatic-Oxford Paper.
+#
+#
+
 rm(list = ls())
-install.packages("devtools")
-install.packages("tidyverse")
+if (!requireNamespace("devtools", quietly = TRUE))
+  install.packages("devtools")
+
+if (!requireNamespace("tidyverse", quietly = TRUE))
+  install.packages("tidyverse")
+
+if (!requireNamespace("AMCBGeneUtils", quietly = TRUE))
 devtools::install_github(repo = "AndresMCB/AMCBGeneUtils")
-devtools::install_github(repo = "AndresMCB/DynamicCancerDriver")
+
+if (!requireNamespace("DynamicCancerDriver", quietly = TRUE))
+  devtools::install_github(repo = "AndresMCB/DynamicCancerDriver")
 
 library(DynamicCancerDriver)
-library(AMCBGeneUtils)
 library(tidyverse)
+
 #### ----- Load Single Cell Data ------ ####
 # pre-processed Single Cell data, GSE75688
 # Genes not expressed in a least 20% of the dataset were removed.
@@ -25,14 +39,14 @@ DCD.VIMtime_SC <- findDCD(GeneExpression = GSE75688_TPM_tumor
                            , PPItop = 0.4
                            , findEvent = TRUE)
 
-DCD.Combined_SC
 
 
 ####---- Load TCGA-BRCA Data -----####
 # Dataset downloaded and normalised using TCGAbiolinks (March 2021).
 # Only samples from primary tumor were downloaded
-# Included DynamicCancerDriver package as TCGA_BRCA_TP_NormCounts.rda
+# Included in DynamicCancerDriver package as TCGA_BRCA_TP_NormCounts.rda
 
+data("TCGA_BRCA_TP_NormCounts")
 # remove genes with no Hugo Symbol
 genes <- AMCBGeneUtils::changeGeneId(colnames(TCGA_BRCA_TP_NormCounts)
                                      , from = "Ensembl.ID")
