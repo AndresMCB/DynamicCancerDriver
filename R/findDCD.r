@@ -1,7 +1,7 @@
 findDCD <- function(GeneExpression, z=NULL, pathCovariate =NULL
                     , findEvent = T, Step=1, chunk_size= 100
                     , PPItop = 0.3, alpha=0.05, CIniter=200
-                    , returnModel=F, elbo_tol=1e-3){
+                    , returnModel=F, elbo_tol=1e-3, project = NULL){
 
   #---- Function for validating pseudotime vector (if provided) ----
   z_validate <- function(z){
@@ -125,7 +125,7 @@ findDCD <- function(GeneExpression, z=NULL, pathCovariate =NULL
     return(list(eventAt=as.numeric(res[1]), z=z))
   }
 
-  ##########
+  #---- function to find pseudotime score (based on Phenopath)
   findZ <- function(GeneExpression, FS, pathCovariate, elbo_tol = elbo_tol){
     if(!require(phenopath)){
       if (!requireNamespace("BiocManager", quietly = TRUE))
@@ -149,7 +149,6 @@ findDCD <- function(GeneExpression, z=NULL, pathCovariate =NULL
     colnames(z)<-"z"
     return(z)
   }
-
 
   #############--------  MAIN FUNCTION CODE  --------#############
   GeneExpression <-dplyr::as_tibble(GeneExpression, rownames=NA)  #to keep rownames
@@ -219,18 +218,23 @@ findDCD <- function(GeneExpression, z=NULL, pathCovariate =NULL
                              , function(x){all(x["p"]<alpha)})))
   }
 
-  if("patient"%in%colnames(GeneExpression)){
-    CDrank <- rankByMut(genesIds = CD
-                        ,project = "BRCA"
-                        , patient_IDs = as.matrix(GeneExpression[,"patient"]))
+  if(!is.null(project)){
+    if("patient"%in%colnames(GeneExpression)){
+      CDrank <- rankByMut(genesIds = CD
+                          ,project = project
+                          ,patient_IDs = as.matrix(GeneExpression[,"patient"]))
 
+    }else{
+      CDrank <- rankByMut(genesIds = CD
+                          ,project = project)
+    }
+    CDinfer <-  CDrank%>%
+      mutate(Ensembl.ID = row.names(CDrank),.before=1)
   }else{
-    CDrank <- rankByMut(genesIds = CD
-                        ,project = "BRCA")
+    CDinfer <- data.frame(Ensembl.ID = CD)
   }
 
-  CDinfer <-  CDrank%>%
-    mutate(Ensembl.ID = row.names(CDrank),.before=1)
+
 
   temp <- sapply(CausalImp[CD]
                  , function(x){
@@ -242,9 +246,15 @@ findDCD <- function(GeneExpression, z=NULL, pathCovariate =NULL
     rownames_to_column(var = "Ensembl.ID")
   CDinfer <- left_join(x = CDinfer, y = temp,by="Ensembl.ID")
 
-  CDinfer <- CDinfer%>%
-    arrange(desc(rank),desc(RelEffect))
-  CDinfer <- cbind(AMCBGeneUtils::changeGeneId(CDinfer[,1])
+  if(!is.null(project)){
+    CDinfer <- CDinfer%>%
+      arrange(desc(rank),desc(RelEffect))
+  }else{
+    CDinfer <- CDinfer%>%
+      arrange(desc(RelEffect))
+  }
+
+  CDinfer <- cbind(AMCBGeneUtils::changeGeneId(CDinfer[,1], from = "Ensembl.ID")[2:4]
                    ,CDinfer[,-1])
 
   data(CGC.driverNames)

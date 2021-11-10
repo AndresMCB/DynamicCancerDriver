@@ -5,7 +5,7 @@
 #
 #
 
-rm(list = ls())
+#rm(list = ls())
 if (!requireNamespace("devtools", quietly = TRUE))
   install.packages("devtools")
 
@@ -18,7 +18,7 @@ devtools::install_github(repo = "AndresMCB/AMCBGeneUtils")
 if (!requireNamespace("DynamicCancerDriver", quietly = TRUE))
   devtools::install_github(repo = "AndresMCB/DynamicCancerDriver")
 
-library(DynamicCancerDriver)
+#library(DynamicCancerDriver)
 library(tidyverse)
 
 #### ----- Load Single Cell Data ------ ####
