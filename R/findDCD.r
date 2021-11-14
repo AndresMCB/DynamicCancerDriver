@@ -256,6 +256,9 @@ findDCD <- function(GeneExpression, z=NULL, pathCovariate =NULL
 
   CDinfer <- cbind(AMCBGeneUtils::changeGeneId(CDinfer[,1], from = "Ensembl.ID")[2:4]
                    ,CDinfer[,-1])
+  rename(CDinfer, p = p.val)
+
+
 
   data(CGC.driverNames)
   nCD <- length(CD)
