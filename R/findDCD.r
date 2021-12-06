@@ -1,3 +1,88 @@
+#' @title findDCD
+#'
+#' @description findDCD identifies genes driving driving one (or more)
+#' significant biological processes along cancer progression based on the
+#' hypothesis that the causal relationship between a cancer driver
+#' gene and cancer development induces a significant deviation (also referred
+#' as causal impact) of a core process from normal to carcinogenic.
+#'
+#' @usage function(GeneExpression, z=NULL, pathCovariate =NULL
+#' , findEvent = T, Step=1, chunk_size= 100
+#' , PPItop = 0.3, alpha=0.05, CIniter=200
+#' , returnModel=F, elbo_tol=1e-3, project = NULL)\cr
+#'
+#' @param GeneExpression A \code{matrix} containing mRNA gene expression.\cr
+#' Columns represent mRNAs, rows represent samples. Column names can be any of
+#' the following: Hugo Gene Symbol (HGNC.symbol), Hugo Gene ID (HGNC.ID),
+#' EnsemblID, NBCI.
+#' @param z A \code{numeric vector} containing a pseudotime
+#' score for each sample. If \code{NULL} (default) a pseudotime score is calculated
+#' by using \code{Phenopath} package and the \code{pathCovariate}.
+#' @param findEvent If \code{TRUE} (default) samples are ordered in pseudotime order
+#' and deviations from normal to cancerogenic are assessed by using
+#' \code{CausalImpact} from the package \code{CausalImpact}. The sample with the
+#' largest (significant) \{CausalImpact} is labelled as the "event". If \code{FALSE},
+#' the sample where the change of sign (from negative to positive) occurs is
+#' laballed as the "event".
+#' @param Step An \code{integer} indicating the distance between samples to be assesed
+#' when \code{findEvent = TRUE}. \code{Step} = 1 (default) means all samples are
+#' considered during the \code{findEvent} process.
+#' @param chunk_size An \code{integer} defining the number of genes to be analysed
+#' at a time. \code{chunk_size = 100} (default) indicates that groups of 100 genes
+#' will be analised at a time.
+#' @param PPItop A \{numeric} value between 0 and 1 indicating the percentage of
+#' PPI genes in the dataset to be selected as putative drivers. PPI genes with the
+#' most interactions are selected.
+#' @param alpha Significance level for the statistical test.
+#' \code{alpha=0.05} by default.
+#'#' @param CIniter number of iterations (200 by default) for
+#' \code{CausalImpact} modeling.
+#' @param returnModel If \code{TRUE}, it includes the complete \code{CausalImpact} model in
+#' the outcome of \code{findDCD}. If \code{FALSE} (default), only the most relevant
+#' parameters of the \code{CausalImpact} model are returned.
+#' @param elbo_tol A \code{numeric} value for the tolerance during the Pseudotime
+#' scoring by \code{Phenopath}. The lower the tolerance the stricter the scoring.
+#' \code{elbo_tol = 1e-3} by default.
+#' @param project An optional parameter with a TCGA project name (e.g. BRCA).
+#' If provided, a dummy rank for the inferred dynamic cancer driver is calculated
+#' based on the frequency of mutations of those genes in the TCGA project dataset.
+#'
+#'
+#' @author Andres Mauricio Cifuentes_Bernal, Vu VH Pham, Xiaomei Li, Lin Liu, JiuyongLi and Thuc Duy Le
+#' @export
+#' @seealso \link[DynamicCancerDriver]{findCovariate},
+#' \link[DynamicCancerDriver]{parallelCI}
+#'
+#' @return A \code{list} consisting of the following elements:
+#'   \item{\code{res}}{A \code{list} with the results of the DynamicCancerDriver
+#'   inference process. Results are listed as follows:
+#'   \enumerate{
+#'           \item{\code{FS:}}{A \code{vector} containing the names of the putative
+#'           cancer drivers}
+#'           \item{\code{CausalImpact:}}{Causal impact models of the putative drivers}
+#'           \item{\code{CDinfer:}}{Inferred Dynamic Cancer Drivers}
+#'           \item{\code{summary:}}{A table with a summary of the results}
+#'           }
+#'    For each target gene with at least one parent. The index of the parents.}
+#'   \item{\code{eventAt}}{A \code{integer} containing the index (after pseudotime
+#'   order) of the sample labelled as the "event".}
+#'   \item{\code{z}}{Pseudotime score}
+#'
+#' @examples \dontrun{
+#'    data("GSE75688_TPM_tumor", package = "DynamicCancerDriver")
+#'
+#' ----- Find Dynamic Cancer Drivers, PPI top 40% -----
+#' DCD.HER2time_SC <- findDCD(GeneExpression = GSE75688_TPM_tumor
+#'                            , pathCovariate = "HER2"
+#'                            , PPItop = 0.3
+#'                            , findEvent = TRUE)
+#' }
+#'
+#' @references
+#'
+#'
+
+
 findDCD <- function(GeneExpression, z=NULL, pathCovariate =NULL
                     , findEvent = T, Step=1, chunk_size= 100
                     , PPItop = 0.3, alpha=0.05, CIniter=200

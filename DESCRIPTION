@@ -1,20 +1,21 @@
 Package: DynamicCancerDriver
 Type: Package
-Title: Dynamic cancer drivers: A causal approach for cancer driver discovery based on bio-pathological
-trajectories
+Title: Dynamic cancer drivers A causal approach for cancer driver discovery based on bio-pathological trajectories
 Version: 1.0.0
 Authors@R: as.person(c(
     "Andres Mauricio Cifuentes_Bernal <andres.cifuentes_bernal@mymail.unisa.edu.au> [aut, cre]", 
     "Vu VH Pham <vu_viet_hoang.pham@mymail.unisa.edu.au> [aut]",
-    "Taosheng Xu <taosheng.x@@gmail.com> [aut]",
+    "Xiaomei Li <xiaomei.li@mymail.unisa.edu.au> [aut]",
+    "Lin Liu <lin.liu@unisa.edu.au> [aut]",
+    "Jiuyong Li <Jiuyong.li@unisa.edu.au> [aut]",
     "Thuc Duy Le <thuc.le@unisa.edu.au> [aut]"
   ))
-Maintainer: Andres M. Cifuentes-Bernal <andres.cifuentes_bernal@mymial.unisa.edu.au>
+Maintainer: Andres M. Cifuentes-Bernal <andres.cifuentes_bernal@mymail.unisa.edu.au>
 Description: We propose a novel approach for causal inference of genes driving one or more core processes
-during cancer development (i.e. dynamic cancer driver ). We use the concept of pseudotime for inferring
-the latent progression of samples along a biological transition during cancer and identifies a critical event
-when such a process is significantly deviated from normal to carcinogenic. We infer driver genes by assessing
-the causal effect they have on the process after such a critical event.
+ during cancer development (i.e. dynamic cancer driver ). We use the concept of pseudotime for inferring
+ the latent progression of samples along a biological transition during cancer and identifies a critical event
+ when such a process is significantly deviated from normal to carcinogenic. We infer driver genes by assessing
+ the causal effect they have on the process after such a critical event.
 License: GPL-3.0
 Encoding: UTF-8
 LazyData: true

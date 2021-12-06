@@ -1,0 +1,31 @@
+\documentclass[a4paper]{book}
+\usepackage[times,inconsolata,hyper]{Rd}
+\usepackage{makeidx}
+\usepackage[utf8]{inputenc} % @SET ENCODING@
+% \usepackage{graphicx} % @USE GRAPHICX@
+\makeindex{}
+\begin{document}
+\chapter*{}
+\begin{center}
+{\textbf{\huge Package `DynamicCancerDriver'}}
+\par\bigskip{\large \today}
+\end{center}
+\inputencoding{utf8}
+\ifthenelse{\boolean{Rd@use@hyper}}{\hypersetup{pdftitle = {DynamicCancerDriver: Dynamic cancer drivers A causal approach for cancer driver discovery based on bio-pathological trajectories}}}{}\ifthenelse{\boolean{Rd@use@hyper}}{\hypersetup{pdfauthor = {Andres Mauricio Cifuentes\_Bernal; Vu VH Pham; Xiaomei Li; Lin Liu; Jiuyong Li; Thuc Duy Le}}}{}\begin{description}
+\raggedright{}
+\item[Type]\AsIs{Package}
+\item[Title]\AsIs{Dynamic cancer drivers A causal approach for cancer driver discovery based on bio-pathological trajectories}
+\item[Version]\AsIs{1.0.0}
+\item[Maintainer]\AsIs{Andres M. Cifuentes-Bernal }\email{andres.cifuentes\_bernal@mymail.unisa.edu.au}\AsIs{}
+\item[Description]\AsIs{We propose a novel approach for causal inference of genes driving one or more core processes
+during cancer development (i.e. dynamic cancer driver ). We use the concept of pseudotime for inferring
+the latent progression of samples along a biological transition during cancer and identifies a critical event
+when such a process is significantly deviated from normal to carcinogenic. We infer driver genes by assessing
+the causal effect they have on the process after such a critical event.}
+\item[License]\AsIs{GPL-3.0}
+\item[Encoding]\AsIs{UTF-8}
+\item[LazyData]\AsIs{true}
+\item[Imports]\AsIs{CausalImpact(>= 1.2.7),
+tidyverse(>= 1.3.1)}
+\end{description}
+\Rdcontents{\R{} topics documented:}
