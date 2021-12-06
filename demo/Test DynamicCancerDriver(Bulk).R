@@ -21,30 +21,6 @@ if (!requireNamespace("DynamicCancerDriver", quietly = TRUE))
 library(DynamicCancerDriver)
 library(tidyverse)
 
-
-#### ----- Load Single Cell Data ------ ####
-# pre-processed Single Cell data, GSE75688
-# Genes not expressed in a least 20% of the dataset were removed.
-# afterwards, only samples from tumor were kept
-
-data("GSE75688_TPM_tumor", package = "DynamicCancerDriver")
-
-#----- Find Dynamic Cancer Drivers, PPI top 40% -----
-DCD.HER2time_SC <- findDCD(GeneExpression = GSE75688_TPM_tumor
-                           , pathCovariate = "HER2"
-                           , PPItop = 0.4
-                           , findEvent = TRUE)
-
-write.csv(DCD.HER2time_SC$res$CDinfer
-         , file =  "supplementary table 1 - dynamic cancer drivers from HER2time(SC).csv")
-
-DCD.VIMtime_SC <- findDCD(GeneExpression = GSE75688_TPM_tumor
-                           , pathCovariate = "VIM"
-                           , PPItop = 0.4
-                           , findEvent = TRUE)
-
-
-
 ####---- Load TCGA-BRCA Data -----####
 # Dataset downloaded and normalised using TCGAbiolinks (March 2021).
 # Only samples from primary tumor were downloaded
@@ -76,9 +52,20 @@ DCD.HER2time_Bulk <- findDCD(GeneExpression = TCGA_BRCA
                            , PPItop = 0.4
                            , findEvent = TRUE
                            , project = "BRCA")
+write.csv(DCD.VIMtime_Bulk$res$CDinfer
+          , file =  "supplementary table 8 - dynamic cancer drivers HER2time(Bulk).csv")
+
 
 DCD.VIMtime_Bulk <- findDCD(GeneExpression = TCGA_BRCA
                           , pathCovariate = "VIM"
                           , PPItop = 0.4
                           , findEvent = TRUE
                           , project = "BRCA")
+write.csv(DCD.VIMtime_Bulk$res$CDinfer
+          , file =  "supplementary table 9 - dynamic cancer drivers VIMtime(Bulk).csv")
+
+
+
+
+
+

@@ -61,7 +61,7 @@ findDCD <- function(GeneExpression, z=NULL, pathCovariate =NULL
 
   #---- function to find the event (only for numerical path covariates)
   DCD.findEvent <- function(z, GeneExpression, pathCovariate.name, Step=Step){
-    sControl <- findSyntheticControl(GeneExpression = GeneExpression
+    sControl <- findCovariate(GeneExpression = GeneExpression
                                      , FS = pathCovariate.name)
 
     if(!require(parallel))
@@ -202,7 +202,7 @@ findDCD <- function(GeneExpression, z=NULL, pathCovariate =NULL
          ,message("Error: z and pathCovariate missing")
   )
 
-  sControl <- findSyntheticControl(GeneExpression=GeneExpression, FS=FS, PPIrank)
+  sControl <- findCovariate(GeneExpression=GeneExpression, FS=FS, PPIrank)
   CausalImp <- parallelCI(GeneExpression = GeneExpression
                           ,sControl = sControl
                           ,z = z

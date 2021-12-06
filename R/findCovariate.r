@@ -1,4 +1,4 @@
-findSyntheticControl <- function(GeneExpression, FS, PPIrank=NULL){
+findCovariate <- function(GeneExpression, FS, PPIrank=NULL){
   GeneExpression <-dplyr::as_tibble(GeneExpression, rownames=NA)
 
   if(is.null(PPIrank))
