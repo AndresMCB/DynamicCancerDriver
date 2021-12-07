@@ -2,20 +2,45 @@ Package: DynamicCancerDriver
 Type: Package
 Title: Dynamic cancer drivers A causal approach for cancer driver discovery based on bio-pathological trajectories
 Version: 1.4.0
-Authors@R: as.person(c(
-    "Andres Mauricio Cifuentes_Bernal <andres.cifuentes_bernal@mymail.unisa.edu.au> [aut, cre]", 
-    "Vu VH Pham <vu_viet_hoang.pham@mymail.unisa.edu.au> [aut]",
-    "Xiaomei Li <xiaomei.li@mymail.unisa.edu.au> [aut]",
-    "Lin Liu <lin.liu@unisa.edu.au> [aut]",
-    "Jiuyong Li <Jiuyong.li@unisa.edu.au> [aut]",
-    "Thuc Duy Le <thuc.le@unisa.edu.au> [aut]"
-  ))
+Authors@R:  
+  c(person(given = "Andres Mauricio",
+           family = "Cifuentes_Bernal",
+           role = c("aut", "cre"),
+           email = "andres.cifuentes_bernal@mymail.unisa.edu.au",
+           comment = c(ORCID = "0000-0002-1880-3624")),
+    person(given = "Vu VH",
+           family = "Pham",
+           role = "aut",
+           email = "vu_viet_hoang.pham@mymail.unisa.edu.au",
+           comment = c(ORCID = "0000-0002-8884-3584")),
+    person(given = "Xiaomei",
+           family = "Li",
+           role = "aut",
+           email = "xiaomei.li@mymail.unisa.edu.au",
+           comment = c(ORCID = "0000-0002-8870-3186")),
+    person(given = "Lin",
+           family = "Liu",
+           role = "aut",
+           email = "lin.liu@unisa.edu.au"),
+    person(given = "Jiuyong",
+           family = "Li",
+           role = "aut",
+           email = "jiuyong.li@unisa.edu.au"),
+    person(given = "Thuc",
+           family = "Le",
+           role = "aut",
+           email = "thuc.le@unisa.edu.au",
+           comment = c(ORCID = "0000-0002-9732-4313"))
+           )
 Maintainer: Andres M. Cifuentes-Bernal <andres.cifuentes_bernal@mymail.unisa.edu.au>
-Description: We propose a novel approach for causal inference of genes driving one or more core processes
- during cancer development (i.e. dynamic cancer driver ). We use the concept of pseudotime for inferring
- the latent progression of samples along a biological transition during cancer and identifies a critical event
- when such a process is significantly deviated from normal to carcinogenic. We infer driver genes by assessing
- the causal effect they have on the process after such a critical event.
+Description: We propose a novel approach for causal inference of
+  genes driving one or more core processes
+  during cancer development (i.e. dynamic cancer driver ).
+  We use the concept of pseudotime for inferring the latent progression of
+  samples along a biological transition during cancer and identifies a critical
+  event when such a process is significantly deviated from normal to carcinogenic.
+  We infer driver genes by assessing the causal effect they have on the
+  process after such a critical event.
 License: GPL-3.0
 Encoding: UTF-8
 LazyData: true
