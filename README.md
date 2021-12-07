@@ -24,23 +24,24 @@ Experiments implemented in our paper can be found as follows:
 ## Installation 
 DynamicCancerDriver runs in the R statistical computing environment.
 
-R (>=4.1.0), devtools(>=2.4.3), Bioconductor (>=3.14), CausalImpact(>= 1.2.7), and
+R (>=4.1.0), devtools(>=2.4.2), Rtools (>=4.0), Bioconductor (>=3.14), CausalImpact(>= 1.2.7), and
  tidyverse(>= 1.3.1) are  required.
 We also use some utilities from another of our packages ([AMCBGeneUtils](https://github.com/AndresMCB/AMCBGeneUtils))
 
-1. Please install Bioconductor, you can use the following code in R
+1. Please download and install Rtools 4.0 from https://cran.r-project.org/bin/windows/Rtools/, remove the incompatible version from your PATH.
+
+2. Please install devtools 
+
 ```R
-if (!requireNamespace("BiocManager", quietly = TRUE))
-    install.packages("BiocManager")
-BiocManager::install(version = "3.14")
+install.packages("devtools")
 ```
-2. Install AMCBGeneUtils package from github repository
+3. Install DynamicCancerDriver package from github repository 
 ```R
-devtools::install_github('AndresMCB/AMCBGeneUtils')
-```
-3. Install DynamicCancerDrivers package from github repository 
-```R
-devtools::install_github('AndresMCB/DynamicCancerDrivers')
+devtools::install_github('AndresMCB/DynamicCancerDriver')
+
+
+
+
 ```
 ## Documentation 
 Detailed information about the functions implemented in PTC can be found in the [user manual](PTC_1.1.0.pdf)
