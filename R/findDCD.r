@@ -236,6 +236,9 @@ findDCD <- function(GeneExpression, z=NULL, pathCovariate =NULL
   }
 
   #############--------  MAIN FUNCTION CODE  --------#############
+  if(!require(AMCBGeneUtils))
+    devtools::install_github('AndresMCB/AMCBGeneUtils')
+
   GeneExpression <-dplyr::as_tibble(GeneExpression, rownames=NA)  #to keep rownames
   PPIrank <- CreatePPIRank(colnames(GeneExpression))
   temp <- PPIrank%>%
