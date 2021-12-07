@@ -44,6 +44,7 @@ Description: We propose a novel approach for causal inference of
 License: GPL-3.0
 Encoding: UTF-8
 LazyData: true
+Depends: R (>= 3.5.0)
 Imports: CausalImpact(>= 1.2.7),
  tidyverse(>= 1.3.1)
 RoxygenNote: 7.1.2
