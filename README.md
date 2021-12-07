@@ -24,9 +24,9 @@ Experiments implemented in our paper can be found as follows:
 ## Installation 
 DynamicCancerDriver runs in the R statistical computing environment.
 
-R (>=4.1.0), devtools(>=2.4.2), Rtools (>=4.0), Bioconductor (>=3.14), CausalImpact(>= 1.2.7), and
+R (>=4.1.0), devtools(>=2.4.2), Rtools (>=4.0), Bioconductor (>=3.14), phenopath (tested with v. 1.18.0), CausalImpact(>= 1.2.7), and
  tidyverse(>= 1.3.1) are  required.
-We also use some utilities from another of our packages ([AMCBGeneUtils](https://github.com/AndresMCB/AMCBGeneUtils))
+We also use some utilities from another of our packages ([AMCBGeneUtils](https://github.com/AndresMCB/AMCBGeneUtils)).
 
 1. Please download and install Rtools 4.0 from https://cran.r-project.org/bin/windows/Rtools/, remove the incompatible version from your PATH.
 
@@ -35,12 +35,20 @@ We also use some utilities from another of our packages ([AMCBGeneUtils](https:/
 ```R
 install.packages("devtools")
 ```
+
 3. Install DynamicCancerDriver package from github repository 
 ```R
 devtools::install_github('AndresMCB/DynamicCancerDriver')
+```
 
+4. Please install DynamicCancerDriver additional packages required as follows: 
+```R
+devtools::install_github('AndresMCB/AMCBGeneUtils')
 
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
 
+BiocManager::install("phenopath")
 
 ```
 ## Documentation 
