@@ -28,20 +28,8 @@ A \code{dataframe} with the following two variables:
 \description{
 For each feature in \code{FS} \code{findCovariate}
 finds the non-PPI gene with the largest pearson correlation with the feature.
-The data of all features in \code{FS}, need to be included in the
+The data of all features in \code{FS} need to be included in the
 \code{GeneExpression} parameter.
-}
-\examples{
-\dontrun{
-   data("GSE75688_TPM_tumor", package = "DynamicCancerDriver")
-
------ Find Dynamic Cancer Drivers, PPI top 40\% -----
-DCD.HER2time_SC <- findDCD(GeneExpression = GSE75688_TPM_tumor
-                           , pathCovariate = "HER2"
-                           , PPItop = 0.3
-                           , findEvent = TRUE)
-}
-
 }
 \references{
 

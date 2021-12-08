@@ -2,10 +2,17 @@
 #'
 #' @description parallelCI
 #'
-#' @usage function(geneIDs = NULL, PPImatrix = NULL)\cr
+#' @usage function(GeneExpression,sControl,z,eventAt
+#' , CIniter=200, chunk_size = 50
+#' , returnModel = F)\cr
+#' @inheritParams findDCD
 #'
-#' @param geneIDs
-#' @param PPImatrix
+#' @param sControl
+#' @param z
+#' @param eventAt
+#' @param CIniter
+#' @param chunk_size
+#' @param returnModel
 #'
 #'
 #' @author Andres Mauricio Cifuentes_Bernal, Vu VH Pham, Xiaomei Li, Lin Liu, JiuyongLi and Thuc Duy Le
@@ -65,7 +72,7 @@ parallelCI <- function(GeneExpression,sControl,z,eventAt
 
 
   CausalImp<-vector(mode = "list",length = nrow(sControl))
-  names(CausalImp) <- sControl[,"gene"]
+  names(CausalImp) <- sControl[,1]
 
   copies_of_r <- detectCores(logical = F)-1
   n<-nrow(sControl)

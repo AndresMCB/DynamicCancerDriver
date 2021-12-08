@@ -4,48 +4,35 @@
 #'
 #' @usage function(geneIDs = NULL, PPImatrix = NULL)\cr
 #'
-#' @param geneIDs
-#' @param PPImatrix
+#' @param geneIDs A \code{character} vector containing genes IDs.IDs can be
+#'  Ensembl.ID (recommended), HGNC.ID, NCBI.ID or HGNC.symbol
+#' @param PPImatrix A 2 column \code{matrix} containing the input nodes (column 1)
+#'  , and the output nodes (column 2) oof a PPI network. If \code{NULL} (default),
+#'  the PPI network decribed in
+#'  \url{https://www.science.org/doi/10.1126/scisignal.2001699} is used as reference.
 #'
 #'
 #' @author Andres Mauricio Cifuentes_Bernal, Vu VH Pham, Xiaomei Li, Lin Liu, JiuyongLi and Thuc Duy Le
 #' @export
-#' @seealso \link[DynamicCancerDriver]{findCovariate},
-#' \link[DynamicCancerDriver]{parallelCI}
+#' @seealso \link[DynamicCancerDriver]{findDCD}
 #'
-#' @return A \code{dataframe} consisting of the following elements:
-#'   \item{\code{res}}{A \code{list} with the results of the DynamicCancerDriver
-#'   inference process. Results are listed as follows:
+#' @return A \code{dataframe} following variables:
 #'   \enumerate{
-#'           \item{\code{FS:}}{A \code{vector} containing the names of the putative
-#'           cancer drivers}
-#'           \item{\code{CausalImpact:}}{Causal impact models of the putative drivers}
-#'           \item{\code{CDinfer:}}{Inferred Dynamic Cancer Drivers}
-#'           \item{\code{summary:}}{A table with a summary of the results}
+#'           \item{\code{IDs}}{Ensembl.ID, HGNC.ID, NCBI.ID or HGNC.symbol of the genes
+#'           in the PPI network}
+#'           \item{\code{n.in}}{Count of the gene as input node}
+#'           \item{\code{n.out}}{Count of the gene as output node}
+#'           \item{\code{total}}{Count of the total times the gene appears in the PPI network}
 #'           }
-#'    For each target gene with at least one parent. The index of the parents.}
-#'   \item{\code{eventAt}}{A \code{integer} containing the index (after pseudotime
-#'   order) of the sample labelled as the "event".}
-#'   \item{\code{z}}{Pseudotime score}
 #'
 #' @examples \dontrun{
 #'    data("GSE75688_TPM_tumor", package = "DynamicCancerDriver")
-#'
-#'    findCovariate(GeneExpression = GSE75688_TPM_tumor[,1:500]
-#'                 ,FS =colnames(GSE75688_TPM_tumor[,1:100]))
-#'
-#' ----- Find Dynamic Cancer Drivers, PPI top 40% -----
-#' DCD.HER2time_SC <- findDCD(GeneExpression = GSE75688_TPM_tumor
-#'                            , pathCovariate = "HER2"
-#'                            , PPItop = 0.3
-#'                            , findEvent = TRUE)
+#'    CreatePPIRank(colnames(GSE75688_TPM_tumor)[1:100])
 #' }
 #'
 #' @references
 #'
 #'
-
-
 
 CreatePPIRank <- function(geneIDs = NULL, PPImatrix = NULL){
 
