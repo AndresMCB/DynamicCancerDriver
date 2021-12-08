@@ -31,6 +31,9 @@
 #' @examples \dontrun{
 #'    data("GSE75688_TPM_tumor", package = "DynamicCancerDriver")
 #'
+#'    findCovariate(GeneExpression = GSE75688_TPM_tumor[,1:500]
+#'                 ,FS =colnames(GSE75688_TPM_tumor[,1:100]))
+#'
 #' ----- Find Dynamic Cancer Drivers, PPI top 40% -----
 #' DCD.HER2time_SC <- findDCD(GeneExpression = GSE75688_TPM_tumor
 #'                            , pathCovariate = "HER2"

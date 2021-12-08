@@ -58,6 +58,15 @@ findCovariate <- function(GeneExpression, FS, PPIrank=NULL){
 
   system.time(Pearson <- cor(x = as.matrix(GeneExpression.comp)
                              , y = as.matrix(DS)))
+
+  temp <- row.names(Pearson)%in%colnames(Pearson)
+  index <- row.names(Pearson)[temp]
+  for (i in index) {
+    Pearson[i,i] <- 0
+  }
+
+
+
   sControl <- as.matrix(apply(Pearson, MARGIN = 2, which.max))
   sControl <- cbind(row.names(sControl),row.names(Pearson)[sControl])
   colnames(sControl) <- c("Feature","scontrol")
