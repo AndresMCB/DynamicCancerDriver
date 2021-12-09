@@ -2,9 +2,12 @@
 #'@description A \code{dataframe} containing the sample ID ("sample"),
 #'type of sample ("type") that can be single cell ("SC") of bulk data ("Bulk"), and
 #'the kind of sample cells ("index", "index2", "index3").\cr
-#'"index" can be either, "Tumor",  or  "nonTumor".\cr
-#'"index2" can be "Tumor", "Stromal", or "Immune".\cr
-#'"index3" can be "Tumor", "Stromal", "Myeloid", "Tcell", "Bcell", or "Immune".
+#'\itemize{
+#' \item{"index"}{can be either, "Tumor",  or  "nonTumor".}
+#' \item{"index2"}{can be "Tumor", "Stromal", or "Immune".}
+#' \item{"index3"}{can be "Tumor", "Stromal", "Myeloid", "Tcell", "Bcell", or "Immune".}
+#'
+#'}
 #'
 #'@name GSE75688_sample_information
 #'@docType data

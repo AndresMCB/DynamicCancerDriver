@@ -1,5 +1,5 @@
 #'@title Gene expression data (TPM) from GSE75688
-#'@description single cell RNA sequencing (RNA-seq) for 549 primary breast cancer
+#'@description Single cell RNA sequencing (RNA-seq) for 549 primary breast cancer
 #'cells and lymph node metastases from 11 patients with distinct molecular subtypes
 #'(BC01-BC02, estrogen receptor positive (ER+); BC03, double positive (ER+ and HER2+)
 #'; BC03LN, lymph node metastasis of BC03; BC04-BC06, human epidermal growth factor
