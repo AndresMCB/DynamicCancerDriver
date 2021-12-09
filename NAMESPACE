@@ -3,4 +3,5 @@
 export(CreatePPIRank)
 export(findCovariate)
 export(findDCD)
+export(findZ)
 export(parallelCI)

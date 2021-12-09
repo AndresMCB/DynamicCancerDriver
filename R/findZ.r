@@ -1,7 +1,12 @@
 
 #' @title findZ
 #'
-#' @description \code{phenopath} package
+#' @description \code{findZ} calculates a pseudotime score for each sample
+#' by using a \code{pathCovariate} that reasonably encodes the progression
+#' of one core biological process during cancer progression (in the sense described by
+#' \href{https://www.nature.com/articles/s41467-018-04696-6}{Campbell 2018}).\cr
+#' Pseudotime score calculation relies in the procedures implemented in the
+#' \href{https://www.bioconductor.org/packages/release/bioc/html/phenopath.html}{phenopath} package.
 #'
 #' @usage function(GeneExpression, FS, pathCovariate, elbo_tol = 1e-3)\cr
 #'
@@ -10,20 +15,16 @@
 #'  to be used for the calculation of the pseudotime score.
 #' @param pathCovariate A \code{named vector} containing the data of a path
 #' covariate.
-#' @param elbo_tol A \code{numeric} value. The relative pct change in the
-#' evidence lower bound (ELBO) below which \code{phenopath} calculation is
-#' considered converged.
 #'
 #' @author Andres Mauricio Cifuentes_Bernal, Vu VH Pham, Xiaomei Li, Lin Liu, JiuyongLi and Thuc Duy Le
 #' @export
 #' @seealso \link[DynamicCancerDriver]{findDCD}
-#' , \link[DynamicCancerDriver]{parallelCI}
 #'
 #' @return A \code{dataframe} with the following two variables:
 #'   \enumerate{
 #'           \item{\code{Feature:}}{The vector \code{FS} of features}
-#'           \item{\code{scontrol:}}{The name of the non-PPI gene with the
-#'           largest Pearson correlation with the respective feature}
+#'           \item{\code{scontrol:}}{For each \code{Feature}, the name of the
+#'           non-PPI gene with the largest Pearson correlation.}
 #'           }
 #'
 #' @examples \dontrun{

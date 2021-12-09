@@ -19,6 +19,13 @@ EnsemblID, NBCI.}
 score for each sample. If \code{NULL} (default) a pseudotime score is calculated
 by using \code{Phenopath} package and the \code{pathCovariate}.}
 
+\item{findEvent}{If \code{TRUE} (default) samples are ordered in pseudotime order
+and deviations from normal to cancerogenic are assessed by using
+\code{CausalImpact} from the package \code{CausalImpact}. The sample with the
+largest (significant) \code{CausalImpact} is labelled as the "event". If \code{FALSE},
+the sample where the change of sign (from negative to positive) occurs is
+laballed as the "event".}
+
 \item{Step}{An \code{integer} indicating the distance between samples to be assesed
 when \code{findEvent = TRUE}. \code{Step} = 1 (default) means all samples are
 considered during the \code{findEvent} process.}
@@ -26,6 +33,10 @@ considered during the \code{findEvent} process.}
 \item{chunk_size}{An \code{integer} defining the number of genes to be analysed
 at a time. \code{chunk_size = 100} (default) indicates that groups of 100 genes
 will be analised at a time.}
+
+\item{PPItop}{A \code{numeric} value between 0 and 1 indicating the percentage of
+PPI genes in the dataset to be selected as putative drivers. PPI genes with the
+most interactions are selected.}
 
 \item{alpha}{Significance level for the statistical test.
 \code{alpha=0.05} by default.

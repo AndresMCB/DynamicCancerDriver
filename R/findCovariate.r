@@ -1,12 +1,12 @@
 #' @title findCovariate
 #'
 #' @description For each feature in \code{FS}, \code{findCovariate}
-#'  finds the non-PPI gene with the largest pearson correlation with the feature.
-#'  The data of all features in \code{FS} need to be included as columns in the
-#'  \code{GeneExpression} matrix.
+#'  finds the non-PPI gene with the largest Pearson correlation with the feature.
+#'  For a proper functioning, the data of all features in \code{FS} must be included as columns in
+#'  \code{GeneExpression}.
 #'
 #'
-#' @usage function(GeneExpression, FS, PPIrank=NULL)\cr
+#' @usage function(GeneExpression, FS, PPIrank=NULL)
 #'
 #' @inheritParams findDCD
 #' @param FS A \code{character} vector containing the names of the features
@@ -17,13 +17,15 @@
 #'
 #' @author Andres Mauricio Cifuentes_Bernal, Vu VH Pham, Xiaomei Li, Lin Liu, JiuyongLi and Thuc Duy Le
 #' @export
-#' @seealso \link[DynamicCancerDriver]{findDCD},
+#' @seealso \link[DynamicCancerDriver]{findDCD}
 #'
 #' @return A \code{dataframe} with the following two variables:
 #'   \enumerate{
-#'           \item{\code{Feature:}}{The vector \code{FS} of features}
-#'           \item{\code{scontrol:}}{The name of the non-PPI gene with the
-#'           largest Pearson correlation with the respective feature}
+#'           \item{\emph{Feature: }}{The vector \code{FS} of features. \cr
+#'           The name of this variable can be 1 of \emph{Ensembl.ID, HGNC.ID, NCBI.ID}
+#'           or \emph{HGNC.symbol}}.
+#'           \item{\code{scontrol: }}{For each \emph{Feature}, the name of the non-PPI gene with the
+#'           largest Pearson correlation}
 #'           }
 #'
 #' @examples \dontrun{
@@ -32,6 +34,7 @@
 #'
 #'    sControl <- findCovariate(GeneExpression = GSE75688_TPM_tumor[,1:500]
 #'    , FS = FS)
+#'    }
 #'
 #'
 #' @references

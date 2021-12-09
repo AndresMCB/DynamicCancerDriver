@@ -34,13 +34,13 @@ Authors@R:
            )
 Maintainer: Andres M. Cifuentes-Bernal <andres.cifuentes_bernal@mymail.unisa.edu.au>
 Description: We propose a novel approach for causal inference of
-  genes driving one or more core processes
-  during cancer development (i.e. dynamic cancer driver ).
-  We use the concept of pseudotime for inferring the latent progression of
-  samples along a biological transition during cancer and identifies a critical
-  event when such a process is significantly deviated from normal to carcinogenic.
-  We infer driver genes by assessing the causal effect they have on the
-  process after such a critical event.
+ genes driving one or more core processes
+ during cancer development (i.e. dynamic cancer driver ).
+ We use the concept of pseudotime for inferring the latent progression of
+ samples along a biological transition during cancer and identifies a critical
+ event when such a process is significantly deviated from normal to carcinogenic.
+ We infer driver genes by assessing the causal effect they have on the
+ process after such a critical event.
 License: GPL-3.0
 Encoding: UTF-8
 LazyData: true
