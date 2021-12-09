@@ -4,13 +4,13 @@
 \alias{findCovariate}
 \title{findCovariate}
 \usage{
-function(GeneExpression, FS, PPIrank=NULL)\cr
+function(GeneExpression, FS, PPIrank=NULL)
 }
 \arguments{
-\item{GeneExpression}{A \code{matrix} containing mRNA gene expression.\cr
-Columns represent mRNAs, rows represent samples. Column names can be any of
-the following: Hugo Gene Symbol (HGNC.symbol), Hugo Gene ID (HGNC.ID),
-EnsemblID, NBCI.}
+\item{GeneExpression}{A \code{dataframe} (preferred) or a \code{matrix} containing mRNA gene expression.\cr
+Columns represent mRNAs and rows represent samples. Column names should correspond
+to gene IDs. Gene IDs can be from any of the following nomenclatures:
+\emph{Ensembl.ID} (recommended), \emph{HGNC.ID, NCBI.ID} or \emph{HGNC.symbol}.}
 
 \item{FS}{A \code{character} vector containing the names of the features
 for which a covariate is to be found.}
@@ -21,16 +21,18 @@ for which a covariate is to be found.}
 \value{
 A \code{dataframe} with the following two variables:
   \enumerate{
-          \item{\code{Feature:}}{The vector \code{FS} of features}
-          \item{\code{scontrol:}}{The name of the non-PPI gene with the
-          largest Pearson correlation with the respective feature}
+          \item{\emph{Feature: }}{The vector \code{FS} of features.
+          The name of this variable will be \emph{Ensembl.ID, HGNC.ID, NCBI.ID}
+          or \emph{HGNC.symbol}}.
+          \item{\code{scontrol: }}{For each \emph{Feature}, the name of the non-PPI gene with the
+          largest Pearson correlation}
           }
 }
 \description{
 For each feature in \code{FS}, \code{findCovariate}
- finds the non-PPI gene with the largest pearson correlation with the feature.
- The data of all features in \code{FS} need to be included as columns in the
- \code{GeneExpression} matrix.
+ finds the non-PPI gene (in \code{GeneExpression}) with the largest Pearson correlation with the feature.\cr
+ For a proper functioning, the data of all features in \code{FS} must be included as columns in
+ \code{GeneExpression}.
 }
 \examples{
 \dontrun{
@@ -47,7 +49,7 @@ For each feature in \code{FS}, \code{findCovariate}
 
 }
 \seealso{
-\link[DynamicCancerDriver]{findDCD},
+\link[DynamicCancerDriver]{findDCD}
 }
 \author{
 Andres Mauricio Cifuentes_Bernal, Vu VH Pham, Xiaomei Li, Lin Liu, JiuyongLi and Thuc Duy Le

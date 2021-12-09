@@ -4,34 +4,38 @@
 \alias{CreatePPIRank}
 \title{CreatePPIRank}
 \usage{
-function(geneIDs = NULL, PPImatrix = NULL)\cr
+function(geneIDs = NULL, PPImatrix = NULL)
 }
 \arguments{
-\item{geneIDs}{A \code{character} vector containing genes IDs.IDs can be
-Ensembl.ID (recommended), HGNC.ID, NCBI.ID or HGNC.symbol}
+\item{geneIDs}{A \code{character} vector containing genes IDs. Genes IDs can be
+\emph{Ensembl.ID} (recommended), \emph{HGNC.ID, NCBI.ID} or \emph{HGNC.symbol}}
 
-\item{PPImatrix}{A 2 column \code{matrix} containing the input nodes (column 1)
-, and the output nodes (column 2) oof a PPI network. If \code{NULL} (default),
-the PPI network decribed in
-\url{https://www.science.org/doi/10.1126/scisignal.2001699} is used as reference.}
+\item{PPImatrix}{A 2 column \code{dataframe} (preferred) or \code{matrix} containing the input nodes (column 1),
+and the output nodes (column 2) of a PPI network. If \code{NULL} (default),
+ the PPI network decribed in
+ \href{https://www.science.org/doi/10.1126/scisignal.2001699}{Vinayagam et al. (2011)}
+ is used as reference.}
 }
 \value{
-A \code{dataframe} following variables:
+A \code{dataframe} with the following variables:
   \enumerate{
-          \item{\code{IDs}}{Ensembl.ID, HGNC.ID, NCBI.ID or HGNC.symbol of the genes
+          \item{\code{IDs: }}{Ensembl.ID, HGNC.ID, NCBI.ID or HGNC.symbol of the genes
           in the PPI network}
-          \item{\code{n.in}}{Count of the gene as input node}
-          \item{\code{n.out}}{Count of the gene as output node}
-          \item{\code{total}}{Count of the total times the gene appears in the PPI network}
+          \item{\code{n.in: }}{Count of the gene as input node}
+          \item{\code{n.out: }}{Count of the gene as output node}
+          \item{\code{total: }}{Count of the total times the gene appears in the PPI network}
           }
 }
 \description{
-CreatePPIRank takes each gene in \code{geneIDs} and determines
+\code{CreatePPIRank} takes each gene in \code{geneIDs} and determines
 the number of times such a gene appears as input node (\code{n.in})
-and output node (\code{n.out}) in the PPI network described by \code{PPImatrix}.
-If no PPImatrix is provided, the PPI network described at
-\url{https://www.science.org/doi/10.1126/scisignal.2001699} is used as reference.
-The rank corresponds to the \code{total} count of the gene in the PPI network.
+and as output node (\code{n.out}) in the PPI network described by \code{PPImatrix}. \cr
+If no \code{PPImatrix} is provided, the PPI network described at
+ \href{https://www.science.org/doi/10.1126/scisignal.2001699}{Vinayagam et al. (2011)}
+ is used as reference.\cr
+ The rank of a gene corresponds to the \code{total} count of the
+ times that such a gene is either an input node or an output node
+ in the PPI network.
 }
 \examples{
 \dontrun{

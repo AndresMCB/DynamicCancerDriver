@@ -4,27 +4,30 @@
 \alias{parallelCI}
 \title{parallelCI}
 \usage{
-function(GeneExpression,sControl,z,eventAt
-, chunk_size = 50, returnModel = F)\cr
+function(GeneExpression,sControl,z,eventAt, CIniter = 200,
+chunk_size = 50, returnModel = F)
 }
 \arguments{
-\item{GeneExpression}{A \code{matrix} containing mRNA gene expression.\cr
-Columns represent mRNAs, rows represent samples. Column names can be any of
-the following: Hugo Gene Symbol (HGNC.symbol), Hugo Gene ID (HGNC.ID),
-EnsemblID, NBCI.}
+\item{GeneExpression}{A \code{dataframe} (preferred) or a \code{matrix} containing mRNA gene expression.\cr
+Columns represent mRNAs and rows represent samples. Column names should correspond
+to gene IDs. Gene IDs can be from any of the following nomenclatures:
+\emph{Ensembl.ID} (recommended), \emph{HGNC.ID, NCBI.ID} or \emph{HGNC.symbol}.}
 
-\item{sControl}{A 2 column matrix containing a gene ID (1st column) and 1 non-PPI
-gene to be uses as covariate for the \code{CausalImpact} model. For a correct
-functioning, the pseudotime ordered data of all element in \code{sControl} need
-to be included as columns in \code{GeneExpression} matrix.}
+\item{sControl}{A 2 column matrix containing gene IDs (1st column) and non-PPI
+gene (1 per gene ID) to be used as covariate for \code{CausalImpact} modelling.
+For a correct functioning, the pseudotime ordered data of all elements in \code{sControl} need
+to be included as columns in \code{GeneExpression}.}
 
-\item{z}{A numeric vector containing the pseudotime score used for ordering
+\item{z}{A \code{numeric} vector containing the pseudotime score used for ordering
 the samples in \code{GeneExpression}. For a correct functioning, \code{z} needs to
 follow ascending order and this order must agree with the order of the samples (rows)
 of the \code{GeneExpression} matrix.}
 
-\item{eventAt}{An integer with the index (in pseudotime order) of the sample where
+\item{eventAt}{An \code{integer} with the index (in pseudotime order) of the sample where
 the most significant change is inferred to happen.}
+
+\item{CIniter}{number of iterations (200 by default)
+for \code{CausalImpact} modeling.}
 
 \item{chunk_size}{An integer indicating the number of genes to be passed to
 each worker during the parallel calculation. (50 by default)}
@@ -36,15 +39,15 @@ each worker during the parallel calculation. (50 by default)}
 \value{
 A \code{list} where each element is the full \code{CausalImpact} model
 (if \code{returnModel = TRUE}) or the simplified \code{CausalImpact} model
-(if \code{returnModel = FALSE}) of one gene in the 1st column of \code{sControl}.
+(if \code{returnModel = FALSE}) of the corresponding gene in the 1st column of \code{sControl}.
 }
 \description{
-parallelCI uses \code{parallel} package for implementing
+{parallelCI} uses \code{\link[parallel]{parallel}} package for implementing
 a parallelised calculation of the \code{CausalImpact} on gene expression.
-It is assumed that the \code{GeneExpression} matrix provided contains
+It is assumed that the provided \code{GeneExpression} matrix contains
 pseudotime ordered gene expression. \code{z} is the pseudotime score used for
 ordering the gene expression, and \code{eventAt} indicates the sample at
-the most significant change occurs.
+the most significant change (from normal to carcinogenic) occurs.
 }
 \examples{
 \dontrun{
@@ -71,7 +74,7 @@ the most significant change occurs.
 }
 \seealso{
 \link[DynamicCancerDriver]{findCovariate},
-\link[DynamicCancerDriver]{parallelCI}
+\link[DynamicCancerDriver]{findDCD}
 }
 \author{
 Andres Mauricio Cifuentes_Bernal, Vu VH Pham, Xiaomei Li, Lin Liu, JiuyongLi and Thuc Duy Le

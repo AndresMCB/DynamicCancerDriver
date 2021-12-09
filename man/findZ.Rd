@@ -7,10 +7,10 @@
 function(GeneExpression, FS, pathCovariate, elbo_tol = 1e-3)\cr
 }
 \arguments{
-\item{GeneExpression}{A \code{matrix} containing mRNA gene expression.\cr
-Columns represent mRNAs, rows represent samples. Column names can be any of
-the following: Hugo Gene Symbol (HGNC.symbol), Hugo Gene ID (HGNC.ID),
-EnsemblID, NBCI.}
+\item{GeneExpression}{A \code{dataframe} (preferred) or a \code{matrix} containing mRNA gene expression.\cr
+Columns represent mRNAs and rows represent samples. Column names should correspond
+to gene IDs. Gene IDs can be from any of the following nomenclatures:
+\emph{Ensembl.ID} (recommended), \emph{HGNC.ID, NCBI.ID} or \emph{HGNC.symbol}.}
 
 \item{FS}{A \code{character} vector containing the names of the features
 to be used for the calculation of the pseudotime score.}
@@ -18,20 +18,26 @@ to be used for the calculation of the pseudotime score.}
 \item{pathCovariate}{A \code{named vector} containing the data of a path
 covariate.}
 
-\item{elbo_tol}{A \code{numeric} value. The relative pct change in the
-evidence lower bound (ELBO) below which \code{phenopath} calculation is
-considered converged.}
+\item{elbo_tol}{A \code{numeric} value (\code{elbo_tol = 1e-3} by default).
+The relative pct change in the
+evidence lower bound (ELBO) below which \code{phenopath} calculation of the
+pseudotime score is considered converged.}
 }
 \value{
 A \code{dataframe} with the following two variables:
   \enumerate{
           \item{\code{Feature:}}{The vector \code{FS} of features}
-          \item{\code{scontrol:}}{The name of the non-PPI gene with the
-          largest Pearson correlation with the respective feature}
+          \item{\code{scontrol:}}{For each \code{Feature}, the name of the
+          non-PPI gene with the largest Pearson correlation.}
           }
 }
 \description{
-\code{phenopath} package
+\code{findZ} calculates a pseudotime score for each sample
+by using a \code{pathCovariate} that reasonably encodes the progression
+of one core biological process during cancer progression (in the sense described by
+\href{https://www.nature.com/articles/s41467-018-04696-6}{Campbell 2018}).\cr
+Pseudotime score calculation relies in the procedures implemented in the
+\href{https://www.bioconductor.org/packages/release/bioc/html/phenopath.html}{phenopath} package.
 }
 \examples{
 \dontrun{
@@ -54,7 +60,6 @@ A \code{dataframe} with the following two variables:
 }
 \seealso{
 \link[DynamicCancerDriver]{findDCD}
-, \link[DynamicCancerDriver]{parallelCI}
 }
 \author{
 Andres Mauricio Cifuentes_Bernal, Vu VH Pham, Xiaomei Li, Lin Liu, JiuyongLi and Thuc Duy Le

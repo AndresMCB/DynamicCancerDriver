@@ -13,7 +13,7 @@
 #' @usage function(geneIDs = NULL, PPImatrix = NULL)
 #'
 #' @param geneIDs A \code{character} vector containing genes IDs. Genes IDs can be
-#'  Ensembl.ID (recommended), HGNC.ID, NCBI.ID or HGNC.symbol
+#'  \emph{Ensembl.ID} (recommended), \emph{HGNC.ID, NCBI.ID} or \emph{HGNC.symbol}
 #' @param PPImatrix A 2 column \code{dataframe} (preferred) or \code{matrix} containing the input nodes (column 1),
 #' and the output nodes (column 2) of a PPI network. If \code{NULL} (default),
 #'  the PPI network decribed in

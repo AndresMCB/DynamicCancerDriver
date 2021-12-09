@@ -8,8 +8,8 @@
 #' the most significant change (from normal to carcinogenic) occurs.
 #'
 #'
-#' @usage function(GeneExpression,sControl,z,eventAt,
-#' chunk_size = 50, returnModel = F)\cr
+#' @usage function(GeneExpression,sControl,z,eventAt, CIniter = 200,
+#' chunk_size = 50, returnModel = F)
 #'
 #' @inheritParams findDCD
 #'
@@ -37,7 +37,7 @@
 #'
 #' @return A \code{list} where each element is the full \code{CausalImpact} model
 #' (if \code{returnModel = TRUE}) or the simplified \code{CausalImpact} model
-#' (if \code{returnModel = FALSE}) of one gene in the 1st column of \code{sControl}.
+#' (if \code{returnModel = FALSE}) of the corresponding gene in the 1st column of \code{sControl}.
 #'
 #'
 #'

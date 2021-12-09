@@ -1,7 +1,7 @@
 #' @title findCovariate
 #'
 #' @description For each feature in \code{FS}, \code{findCovariate}
-#'  finds the non-PPI gene with the largest Pearson correlation with the feature.
+#'  finds the non-PPI gene (in \code{GeneExpression}) with the largest Pearson correlation with the feature.\cr
 #'  For a proper functioning, the data of all features in \code{FS} must be included as columns in
 #'  \code{GeneExpression}.
 #'
@@ -21,8 +21,8 @@
 #'
 #' @return A \code{dataframe} with the following two variables:
 #'   \enumerate{
-#'           \item{\emph{Feature: }}{The vector \code{FS} of features. \cr
-#'           The name of this variable can be 1 of \emph{Ensembl.ID, HGNC.ID, NCBI.ID}
+#'           \item{\emph{Feature: }}{The vector \code{FS} of features.
+#'           The name of this variable will be \emph{Ensembl.ID, HGNC.ID, NCBI.ID}
 #'           or \emph{HGNC.symbol}}.
 #'           \item{\code{scontrol: }}{For each \emph{Feature}, the name of the non-PPI gene with the
 #'           largest Pearson correlation}
