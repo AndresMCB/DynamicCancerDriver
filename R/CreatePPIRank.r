@@ -1,6 +1,11 @@
 #' @title CreatePPIRank
 #'
-#' @description CreatePPIRank
+#' @description CreatePPIRank takes each gene in \code{geneIDs} and determines
+#' the number of times such a gene appears as input node (\code{n.in})
+#' and output node (\code{n.out}) in the PPI network described by \code{PPImatrix}.
+#' If no PPImatrix is provided, the PPI network described at
+#' \url{https://www.science.org/doi/10.1126/scisignal.2001699} is used as reference.
+#' The rank corresponds to the \code{total} count of the gene in the PPI network.
 #'
 #' @usage function(geneIDs = NULL, PPImatrix = NULL)\cr
 #'

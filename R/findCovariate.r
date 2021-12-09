@@ -1,6 +1,6 @@
 #' @title findCovariate
 #'
-#' @description For each feature in \code{FS} \code{findCovariate}
+#' @description For each feature in \code{FS}, \code{findCovariate}
 #'  finds the non-PPI gene with the largest pearson correlation with the feature.
 #'  The data of all features in \code{FS} need to be included as columns in the
 #'  \code{GeneExpression} matrix.
@@ -28,9 +28,11 @@
 #'
 #' @examples \dontrun{
 #'    data("GSE75688_TPM_tumor", package = "DynamicCancerDriver")
+#'    FS <- colnames(GSE75688_TPM_tumor)[1:100]
 #'
 #'    sControl <- findCovariate(GeneExpression = GSE75688_TPM_tumor[,1:500]
-#'    , FS = colnames(GSE75688_TPM_tumor)[1:100])
+#'    , FS = FS)
+#'
 #'
 #' @references
 

@@ -210,31 +210,6 @@ findDCD <- function(GeneExpression, z=NULL, pathCovariate =NULL
     return(list(eventAt=as.numeric(res[1]), z=z))
   }
 
-  #---- function to find pseudotime score (based on Phenopath)
-  findZ <- function(GeneExpression, FS, pathCovariate, elbo_tol = elbo_tol){
-    if(!require(phenopath)){
-      if (!requireNamespace("BiocManager", quietly = TRUE))
-        install.packages("BiocManager")
-
-      BiocManager::install("phenopath")
-    }
-    library(phenopath)
-    exprs_obj <- GeneExpression%>%
-      dplyr::select(all_of(FS))%>%
-      transmute_all(as.numeric)
-
-    exprs_obj <- log(exprs_obj + 1)
-
-    Ptime<-phenopath(exprs_obj = data.matrix(exprs_obj)
-                     , x = data.matrix(pathCovariate), elbo_tol = elbo_tol)
-
-    #plot_elbo(Ptime)
-    z <- as.matrix(trajectory(Ptime),ncol=1)
-    row.names(z)<-row.names(GeneExpression)
-    colnames(z)<-"z"
-    return(z)
-  }
-
   #############--------  MAIN FUNCTION CODE  --------#############
   if(!require(AMCBGeneUtils))
     devtools::install_github('AndresMCB/AMCBGeneUtils')
