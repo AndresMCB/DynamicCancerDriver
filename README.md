@@ -52,6 +52,6 @@ BiocManager::install("phenopath")
 
 ```
 ## Documentation 
-Detailed information about the functions implemented in PTC can be found in the [user manual](PTC_1.1.0.pdf)
+Detailed information about the functions implemented in PTC can be found in the [user manual](DynamicCancerDriver_1.4.1.pdf)
 
 Please find the datasets employed in our paper in the folder [data](data/)
