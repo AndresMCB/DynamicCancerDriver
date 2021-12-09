@@ -1,7 +1,7 @@
 Package: DynamicCancerDriver
 Type: Package
 Title: Dynamic cancer drivers A causal approach for cancer driver discovery based on bio-pathological trajectories
-Version: 1.4.0
+Version: 1.4.1
 Authors@R:  
   c(person(given = "Andres Mauricio",
            family = "Cifuentes_Bernal",
