@@ -52,7 +52,7 @@ DCD.HER2time_Bulk <- findDCD(GeneExpression = TCGA_BRCA
                            , PPItop = 0.4
                            , findEvent = TRUE
                            , project = "BRCA")
-write.csv(DCD.VIMtime_Bulk$res$CDinfer
+write.csv(DCD.HER2time_Bulk$res$CDinfer
           , file =  "supplementary table 8 - dynamic cancer drivers HER2time(Bulk).csv")
 
 
