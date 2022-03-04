@@ -33,7 +33,9 @@ data("GSE75688_TPM_tumor", package = "DynamicCancerDriver")
 DCD.HER2time_SC <- findDCD(GeneExpression = GSE75688_TPM_tumor
                            , pathCovariate = "HER2"
                            , PPItop = 0.4
-                           , findEvent = TRUE)
+                           , findEvent = TRUE
+                           , alpha = 0.05)
+
 
 write.csv(DCD.HER2time_SC$res$CDinfer
          , file =  "supplementary table 1 - dynamic cancer drivers HER2time(SC).csv")
