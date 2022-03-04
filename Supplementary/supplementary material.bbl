@@ -1,0 +1,27 @@
+\begin{thebibliography}{}
+
+\bibitem[Chung et~al., 2017]{Chung2017}
+Chung, W., Eum, H.~H., Lee, H.-O., Lee, K.-M., Lee, H.-B., Kim, K.-T., Ryu,
+  H.~S., Kim, S., Lee, J.~E., Park, Y.~H., Kan, Z., Han, W., and Park, W.-Y.
+  (2017).
+\newblock Single-cell rna-seq enables comprehensive tumour and immune cell
+  profiling in primary breast cancer.
+\newblock {\em Nature Communications}, 8(1):15081.
+
+\bibitem[Kuleshov et~al., 2016]{Kuleshov2016}
+Kuleshov, M.~V., Jones, M.~R., Rouillard, A.~D., Fernandez, N.~F., Duan, Q.,
+  Wang, Z., Koplev, S., Jenkins, S.~L., Jagodnik, K.~M., Lachmann, A.,
+  McDermott, M.~G., Monteiro, C.~D., Gundersen, G.~W., and Ma'ayan, A. (2016).
+\newblock Enrichr: a comprehensive gene set enrichment analysis web server 2016
+  update.
+\newblock {\em Nucleic acids research}, 44:W90--7.
+
+\bibitem[Piñero et~al., 2016]{Pinero2016}
+Piñero, J., Bravo, l., Queralt-Rosinach, N., Gutiérrez-Sacristán, A.,
+  Deu-Pons, J., Centeno, E., García-García, J., Sanz, F., and Furlong, L.~I.
+  (2016).
+\newblock {DisGeNET: a comprehensive platform integrating information on human
+  disease-associated genes and variants}.
+\newblock {\em Nucleic Acids Research}, 45(D1):D833--D839.
+
+\end{thebibliography}

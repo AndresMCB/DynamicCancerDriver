@@ -1,0 +1,1401 @@
+% Encoding: UTF-8
+
+@Article{Pfister2018,
+  author    = {Niklas Pfister and Peter Bühlmann and Jonas Peters},
+  title     = {Invariant Causal Prediction for Sequential Data},
+  journal   = {Journal of the American Statistical Association},
+  year      = {2018},
+  volume    = {114},
+  number    = {527},
+  pages     = {1264--1276},
+  month     = {dec},
+  doi       = {10.1080/01621459.2018.1491403},
+  file      = {\:PDF\:PDF:/\:Pfister2018 - Invariant Causal Prediction for Sequential Data.pdf/\:PDF\:/\:Pfister2018 - Invariant Causal Prediction for Sequential Data.pdf/\:PDF\:PDF:},
+  publisher = {Informa {UK} Limited},
+}
+
+@Article{Peters2015,
+  author        = {Jonas Peters and Peter Bühlmann and Nicolai Meinshausen},
+  title         = {Causal inference using invariant prediction: identification and confidence intervals},
+  journal       = {Journal of the Royal Statistical Society, Series B (with discussion) 78(5): 947-1012 (2016)},
+  year          = {2015},
+  month         = jan,
+  abstract      = {What is the difference of a prediction that is made with a causal model and a non-causal model? Suppose we intervene on the predictor variables or change the whole environment. The predictions from a causal model will in general work as well under interventions as for observational data. In contrast, predictions from a non-causal model can potentially be very wrong if we actively intervene on variables. Here, we propose to exploit this invariance of a prediction under a causal model for causal inference: given different experimental settings (for example various interventions) we collect all models that do show invariance in their predictive accuracy across settings and interventions. The causal model will be a member of this set of models with high probability. This approach yields valid confidence intervals for the causal relationships in quite general scenarios. We examine the example of structural equation models in more detail and provide sufficient assumptions under which the set of causal predictors becomes identifiable. We further investigate robustness properties of our approach under model misspecification and discuss possible extensions. The empirical properties are studied for various data sets, including large-scale gene perturbation experiments.},
+  archiveprefix = {arXiv},
+  eprint        = {http://arxiv.org/abs/1501.01332v3},
+  file          = {1501.01332v3\:PDF:\:http/\://arxiv.org/pdf/1501.01332v3\:PDF:PDF},
+  keywords      = {stat.ME},
+  primaryclass  = {stat.ME},
+}
+
+@Article{Pham2019,
+  author    = {Vu VH Pham and Junpeng Zhang and Lin Liu and Buu Truong and Taosheng Xu and Trung T. Nguyen and Jiuyong Li and Thuc D. Le},
+  title     = {Identifying {miRNA}-{mRNA} regulatory relationships in breast cancer with invariant causal prediction},
+  journal   = {{BMC} Bioinformatics},
+  year      = {2019},
+  volume    = {20},
+  number    = {1},
+  month     = {mar},
+  doi       = {10.1186/s12859-019-2668-x},
+  publisher = {Springer Nature},
+}
+
+@Article{Wang2019,
+  author    = {Nayi Wang and Ji Zheng and Zhuo Chen and Yang Liu and Burak Dura and Minsuk Kwak and Juliana Xavier-Ferrucio and Yi-Chien Lu and Miaomiao Zhang and Christine Roden and Jijun Cheng and Diane S. Krause and Ye Ding and Rong Fan and Jun Lu},
+  title     = {Single-cell {microRNA}-{mRNA} co-sequencing reveals non-genetic heterogeneity and mechanisms of {microRNA} regulation},
+  journal   = {Nature Communications},
+  year      = {2019},
+  volume    = {10},
+  number    = {1},
+  month     = {jan},
+  doi       = {10.1038/s41467-018-07981-6},
+  file      = {\:PDF\:PDF:/\:PDF/\:PDF\://\:PDF//\:PDF/\:///\:Wang2019.pdf///\:PDF//\:///\:Wang2019.pdf///\:PDF//\:PDF/\:PDF\:PDF:PDF},
+  publisher = {Springer Nature},
+}
+
+@Manual{Campbell2019,
+  title  = {switchde: Switch-like differential expression across single-cell trajectories},
+  author = {Kieran Campbell},
+  year   = {2019},
+  note   = {R package version 1.10.0},
+  url    = {https://github.com/kieranrcampbell/switchde},
+}
+
+@Article{Chou2015,
+  author    = {Chou, Chih-Hung and Chang, Nai-Wen and Shrestha, Sirjana and Hsu, Sheng-Da and Lin, Yu-Ling and Lee, Wei-Hsiang and Yang, Chi-Dung and Hong, Hsiao-Chin and Wei, Ting-Yen and Tu, Siang-Jyun and others},
+  title     = {miRTarBase 2016: updates to the experimentally validated miRNA-target interactions database},
+  journal   = {Nucleic acids research},
+  year      = {2015},
+  volume    = {44},
+  number    = {D1},
+  pages     = {D239--D247},
+  publisher = {Oxford University Press},
+}
+
+@Article{Vlachos2014,
+  author    = {Vlachos, Ioannis S and Paraskevopoulou, Maria D and Karagkouni, Dimitra and Georgakilas, Georgios and Vergoulis, Thanasis and Kanellos, Ilias and Anastasopoulos, Ioannis-Laertis and Maniou, Sofia and Karathanou, Konstantina and Kalfakakou, Despina and others},
+  title     = {DIANA-TarBase v7. 0: indexing more than half a million experimentally supported miRNA: mRNA interactions},
+  journal   = {Nucleic acids research},
+  year      = {2014},
+  volume    = {43},
+  number    = {D1},
+  pages     = {D153--D159},
+  publisher = {Oxford University Press},
+}
+
+@Article{Dweep2015,
+  author    = {Dweep, Harsh and Gretz, Norbert},
+  title     = {miRWalk2. 0: a comprehensive atlas of microRNA-target interactions},
+  journal   = {Nature methods},
+  year      = {2015},
+  volume    = {12},
+  number    = {8},
+  pages     = {697},
+  publisher = {Nature Publishing Group},
+}
+
+@Article{Xu2017,
+  author  = {Taosheng Xu and Thuc Duy Le and Lin Liu and Ning Su and Rujing Wang and Bingyu Sun and Antonio Colaprico and Gianluca Bontempi and Jiuyong Li},
+  title   = {CancerSubtypes: an R/Bioconductor package for molecular cancer subtype identification, validation, and visualization},
+  journal = {Bioinformatics},
+  year    = {2017},
+  doi     = {10.1093/bioinformatics/btx378},
+}
+
+@Article{Xu2018,
+  author    = {Taosheng Xu and Ning Su and Lin Liu and Junpeng Zhang and Hongqiang Wang and Jie Gui and Kui Yu and Jiuyong Li and Thuc Duy Le},
+  title     = {miRBaseConverter: An R/Bioconductor Package for Converting and Retrieving miRNA Name, Accession, Sequence and Family Information in Different Versions of miRBase},
+  journal   = {BioRxiv},
+  year      = {2018},
+  volume    = {407148},
+  month     = {sep},
+  doi       = {10.1101/407148},
+  publisher = {Cold Spring Harbor Laboratory},
+}
+
+@Article{Agarwal2015,
+  author    = {Vikram Agarwal and George W Bell and Jin-Wu Nam and David P Bartel},
+  title     = {Predicting effective {microRNA} target sites in mammalian {mRNAs}},
+  journal   = {{eLife}},
+  year      = {2015},
+  volume    = {4},
+  month     = {aug},
+  doi       = {10.7554/elife.05005},
+  publisher = {{eLife} Sciences Publications, Ltd},
+}
+
+@Article{Tong2018,
+  author    = {Tong, Yin and Ru, Beibei and Zhang, Jiangwen},
+  title     = {miRNACancerMAP: an integrative web server inferring miRNA regulation network for cancer},
+  journal   = {Bioinformatics},
+  year      = {2018},
+  volume    = {34},
+  number    = {18},
+  pages     = {3211--3213},
+  publisher = {Oxford University Press},
+}
+
+@Article{Nicoloso2009,
+  author    = {Nicoloso, Milena S and Spizzo, Riccardo and Shimizu, Masayoshi and Rossi, Simona and Calin, George A},
+  title     = {MicroRNAs—the micro steering wheel of tumour metastases},
+  journal   = {Nature Reviews Cancer},
+  year      = {2009},
+  volume    = {9},
+  number    = {4},
+  pages     = {293--302},
+  publisher = {Nature Publishing Group},
+}
+
+@Article{Liu2010,
+  author    = {Liu, Bing and Liu, Lin and Tsykin, Anna and Goodall, Gregory J and Green, Jeffrey E and Zhu, Min and Kim, Chang Hee and Li, Jiuyong},
+  title     = {Identifying functional miRNA--mRNA regulatory modules with correspondence latent dirichlet allocation},
+  journal   = {Bioinformatics},
+  year      = {2010},
+  volume    = {26},
+  number    = {24},
+  pages     = {3105--3111},
+  publisher = {Oxford University Press},
+}
+
+@Article{Zhang2019,
+  author   = {Zhang, Junpeng and Pham, Vu Viet Hoang and Liu, Lin and Xu, Taosheng and Truong, Buu and Li, Jiuyong and Rao, Nini and Le, Thuc Duy},
+  title    = {Identifying miRNA synergism using multiple-intervention causal inference},
+  journal  = {BMC Bioinformatics},
+  year     = {2019},
+  volume   = {20},
+  number   = {23},
+  pages    = {613},
+  month    = dec,
+  issn     = {1471-2105},
+  abstract = {Studying multiple microRNAs (miRNAs) synergism in gene regulation could help to understand the regulatory mechanisms of complicated human diseases caused by miRNAs. Several existing methods have been presented to infer miRNA synergism. Most of the current methods assume that miRNAs with shared targets at the sequence level are working synergistically. However, it is unclear if miRNAs with shared targets are working in concert to regulate the targets or they individually regulate the targets at different time points or different biological processes. A standard method to test the synergistic activities is to knock-down multiple miRNAs at the same time and measure the changes in the target genes. However, this approach may not be practical as we would have too many sets of miRNAs to test.},
+  refid    = {Zhang2019},
+  url      = {https://doi.org/10.1186/s12859-019-3215-5},
+}
+
+@Article{Mahlab-Aviv2019,
+  author    = {Mahlab-Aviv, Shelly and Linial, Nathan and Linial, Michal},
+  title     = {A cell-based probabilistic approach unveils the concerted action of miRNAs},
+  journal   = {PLoS Computational Biology},
+  year      = {2019},
+  volume    = {15},
+  number    = {12},
+  publisher = {Public Library of Science},
+}
+
+@Article{Peterson2014,
+  author    = {Peterson, Sarah M and Thompson, Jeffrey A and Ufkin, Melanie L and Sathyanarayana, Pradeep and Liaw, Lucy and Congdon, Clare Bates},
+  title     = {Common features of microRNA target prediction tools},
+  journal   = {Frontiers in genetics},
+  year      = {2014},
+  volume    = {5},
+  pages     = {23},
+  publisher = {Frontiers},
+}
+
+@Article{Delgado2019,
+  author    = {Delgado, Fernando M and G{\'o}mez-Vela, Francisco},
+  title     = {Computational methods for Gene Regulatory Networks reconstruction and analysis: A review},
+  journal   = {Artificial intelligence in medicine},
+  year      = {2019},
+  volume    = {95},
+  pages     = {133--145},
+  publisher = {Elsevier},
+}
+
+@Article{Campbell2017,
+  author    = {Campbell, Kieran R and Yau, Christopher},
+  title     = {switchde: inference of switch-like differential expression along single-cell trajectories},
+  journal   = {Bioinformatics},
+  year      = {2017},
+  volume    = {33},
+  number    = {8},
+  pages     = {1241--1242},
+  publisher = {Oxford University Press},
+}
+
+@Article{Le2013,
+  author    = {Le, Thuc Duy and Liu, Lin and Tsykin, Anna and Goodall, Gregory J and Liu, Bing and Sun, Bing-Yu and Li, Jiuyong},
+  title     = {Inferring microRNA--mRNA causal regulatory relationships from expression data},
+  journal   = {Bioinformatics},
+  year      = {2013},
+  volume    = {29},
+  number    = {6},
+  pages     = {765--771},
+  publisher = {Oxford University Press},
+}
+
+@Article{Kalisch2012,
+  author    = {Kalisch, Markus and M{\"a}chler, Martin and Colombo, Diego and Maathuis, Marloes H and B{\"u}hlmann, Peter},
+  title     = {Causal inference using graphical models with the R package pcalg},
+  journal   = {Journal of Statistical Software},
+  year      = {2012},
+  volume    = {47},
+  number    = {11},
+  pages     = {1--26},
+  publisher = {American Statistical Association},
+}
+
+@InProceedings{le2017identifying,
+  author    = {Le, Thuc Duy and Zhang, Junpeng and Liu, Lin and Truong, Buu Minh Thanh and Hu, Shu and Xu, Taosheng and Li, Jiuyong},
+  title     = {Identifying microrna targets in epithelial-mesenchymal transition using joint-intervention causal inference},
+  booktitle = {Proceedings of the 8th International Conference on Computational Systems-Biology and Bioinformatics},
+  year      = {2017},
+  pages     = {34--41},
+}
+
+@Article{Pearson1920,
+  author    = {Pearson, Karl},
+  journal   = {Biometrika},
+  title     = {Notes on the history of correlation},
+  year      = {1920},
+  number    = {1},
+  pages     = {25--45},
+  volume    = {13},
+  groups    = {[cifam001:]},
+  publisher = {JSTOR},
+}
+
+@Article{Tibshirani1996,
+  author    = {Tibshirani, Robert},
+  journal   = {Journal of the Royal Statistical Society: Series B (Methodological)},
+  title     = {Regression shrinkage and selection via the lasso},
+  year      = {1996},
+  number    = {1},
+  pages     = {267--288},
+  volume    = {58},
+  groups    = {cifam001:6},
+  publisher = {Wiley Online Library},
+}
+
+@Misc{Gitter2018,
+  author    = {Gitter, Anthony},
+  title     = {Agitter/Single-Cell-Pseudotime: 2018-06-25 Archive},
+  year      = {2018},
+  doi       = {10.5281/ZENODO.1297422},
+  publisher = {Zenodo},
+}
+
+@Article{Aldrich1989,
+  author    = {Aldrich, John},
+  journal   = {Oxford Economic Papers},
+  title     = {{AUTONOMY}},
+  year      = {1989},
+  issn      = {0030-7653},
+  month     = {01},
+  number    = {1},
+  pages     = {15-34},
+  volume    = {41},
+  doi       = {10.1093/oxfordjournals.oep.a041889},
+  eprint    = {https://academic.oup.com/oep/article-pdf/41/1/15/6993985/41-1-15.pdf},
+  publisher = {Oxford University Press ({OUP})},
+  url       = {https://doi.org/10.1093/oxfordjournals.oep.a041889},
+}
+
+@Book{Pearl2009,
+  author    = {Pearl, Judea},
+  publisher = {Cambridge university press},
+  title     = {Causality},
+  year      = {2009},
+}
+
+@InProceedings{Schoelkopf2012,
+  author    = {Sch\"{o}lkopf, Bernhard and Janzing, Dominik and Peters, Jonas and Sgouritsa, Eleni and Zhang, Kun and Mooij, Joris},
+  booktitle = {Proceedings of the 29th International Coference on International Conference on Machine Learning},
+  title     = {On Causal and Anticausal Learning},
+  year      = {2012},
+  address   = {Madison, WI, USA},
+  pages     = {459–466},
+  publisher = {Omnipress},
+  series    = {ICML’12},
+  isbn      = {9781450312851},
+  location  = {Edinburgh, Scotland},
+  numpages  = {8},
+}
+
+@Article{Dawid2010,
+  author    = {Dawid, A Philip and Didelez, Vanessa and others},
+  journal   = {Statistics Surveys},
+  title     = {Identifying the consequences of dynamic treatment strategies: A decision-theoretic overview},
+  year      = {2010},
+  pages     = {184--231},
+  volume    = {4},
+  publisher = {The author, under a Creative Commons Attribution License},
+}
+
+@Article{Casabonne,
+  author   = {Casabonne, Delphine and Benavente, Yolanda and Seifert, Julia and Costas, Laura and Armesto, María and Arestin, María and Besson, Caroline and Hosnijeh, Fatemeh S. and Duell, Eric J. and Weiderpass, Elisabete and Masala, Giovanna and Kaaks, Rudolf and Canzian, Federico and Chirlaque, María-Dolores and Perduca, Vittorio and Mancini, Francesca R. and Pala, Valeria and Trichopoulou, Antonia and Karakatsani, Anna and La Vecchia, Carlo and Sánchez, Maria-Jose and Tumino, Rosario and Gunter, Marc J. and Amiano, Pilar and Panico, Salvatore and Sacerdote, Carlotta and Schmidt, Julie A. and Boeing, Heiner and Schulze, Matthias B. and Barricarte, Aurelio and Riboli, Elio and Olsen, Anja and Tjønneland, Anne and Vermeulen, Roel and Nieters, Alexandra and Lawrie, Charles H. and de Sanjosé, Silvia},
+  journal  = {International Journal of Cancer},
+  title    = {Serum levels of hsa-miR-16-5p, hsa-miR-29a-3p, hsa-miR-150-5p, hsa-miR-155-5p and hsa-miR-223-3p and subsequent risk of chronic lymphocytic leukemia in the EPIC study},
+  number   = {n/a},
+  volume   = {n/a},
+  abstract = {Chronic lymphocytic leukemia (CLL) is an incurable disease accounting for almost one-third of leukemias in the Western world. Aberrant expression of microRNAs (miRNAs) is a well-established characteristic of CLL, and the robust nature of miRNAs makes them eminently suitable liquid biopsy biomarkers. Using a nested case–control study within the European Prospective Investigation into Cancer and Nutrition (EPIC), the predictive values of five promising human miRNAs (hsa-miR-16-5p, hsa-miR-29a-3p, hsa-miR-150-5p, hsa-miR-155-5p and hsa-miR-223-3p), identified in a pilot study, were examined in serum of 224 CLL cases (diagnosed 3 months to 18 years after enrollment) and 224 matched controls using Taqman based assays. Conditional logistic regressions were applied to adjust for potential confounders. The median time from blood collection to CLL diagnosis was 10 years (p25–p75: 7–13 years). Overall, the upregulation of hsa-miR-150-5p, hsa-miR-155-5p and hsa-miR-29a-3p was associated with subsequent risk of CLL [OR1∆Ct-unit increase (95\%CI) = 1.42 (1.18–1.72), 1.64 (1.31–2.04) and 1.75 (1.31–2.34) for hsa-miR-150-5p, hsa-miR-155-5p and hsa-miR-29a-3p, respectively] and the strongest associations were observed within 10 years of diagnosis. However, the predictive performance of these miRNAs was modest (area under the curve <0.62). hsa-miR-16-5p and hsa-miR-223-3p levels were unrelated to CLL risk. The findings of this first prospective study suggest that hsa-miR-29a, hsa-miR-150-5p and hsa-miR-155-5p were upregulated in early stages of CLL but were modest predictive biomarkers of CLL risk.},
+  doi      = {10.1002/ijc.32894},
+  eprint   = {https://onlinelibrary.wiley.com/doi/pdf/10.1002/ijc.32894},
+  keywords = {chronic lymphocytic leukemia, circulating miRNA, serum, prospective study},
+  url      = {https://onlinelibrary.wiley.com/doi/abs/10.1002/ijc.32894},
+}
+﻿
+
+@Article{Drobna2018,
+  author                     = {Drobna, Monika and Szarzynska-Zawadzka, Bronislawa and Daca-Roszak, Patrycja and Kosmalska, Maria and Jaksik, Roman and Witt, Michal and Dawidowska, Malgorzata},
+  journal                    = {{INTERNATIONAL JOURNAL OF MOLECULAR SCIENCES}},
+  title                      = {{Identification of Endogenous Control miRNAs for RT-qPCR in T-Cell Acute Lymphoblastic Leukemia}},
+  year                       = {{2018}},
+  issn                       = {{1422-0067}},
+  month                      = {{OCT}},
+  number                     = {{10}},
+  volume                     = {{19}},
+  abstract                   = {{Optimal endogenous controls enable reliable normalization of microRNA
+   (miRNA) expression in reverse-transcription quantitative PCR (RT-qPCR).
+   This is particularly important when miRNAs are considered as candidate
+   diagnostic or prognostic biomarkers. Universal endogenous controls are
+   lacking, thus candidate normalizers must be evaluated individually for
+   each experiment. Here we present a strategy that we applied to the
+   identification of optimal control miRNAs for RT-qPCR profiling of miRNA
+   expression in T-cell acute lymphoblastic leukemia (T-ALL) and in normal
+   cells of T-lineage. First, using NormFinder for an iterative analysis of
+   miRNA stability in our miRNA-seq data, we established the number of
+   control miRNAs to be used in RT-qPCR. Then, we identified optimal
+   control miRNAs by a comprehensive analysis of miRNA stability in
+   miRNA-seq data and in RT-qPCR by analysis of RT-qPCR amplification
+   efficiency and expression across a variety of T-lineage samples and
+   T-ALL cell line culture conditions. We then showed the utility of the
+   combination of three miRNAs as endogenous normalizers (hsa-miR-16-5p,
+   hsa-miR-25-3p, and hsa-let-7a-5p). These miRNAs might serve as
+   first-line candidate endogenous controls for RT-qPCR analysis of miRNAs
+   in different types of T-lineage samples: T-ALL patient samples, T-ALL
+   cell lines, normal immature thymocytes, and mature T-lymphocytes. The
+   strategy we present is universal and can be transferred to other RT-qPCR
+   experiments.}},
+  address                    = {{ST ALBAN-ANLAGE 66, CH-4052 BASEL, SWITZERLAND}},
+  affiliation                = {{Dawidowska, M (Reprint Author), Polish Acad Sci, Inst Human Genet, PL-60479 Poznan, Poland. Drobna, Monika; Szarzynska-Zawadzka, Bronislawa; Daca-Roszak, Patrycja; Kosmalska, Maria; Witt, Michal; Dawidowska, Malgorzata, Polish Acad Sci, Inst Human Genet, PL-60479 Poznan, Poland. Jaksik, Roman, Silesian Tech Univ, PL-44100 Gliwice, Poland.}},
+  article-number             = {{2858}},
+  author-email               = {{monika.drobna@igcz.poznan.pl bronislawa.szarzynska-zawadzka@igcz.poznan.pl patrycja.daca-roszak@igcz.poznan.pl maria.kosmalska@igcz.poznan.pl roman.jaksik@polsl.pl michal.witt@igcz.poznan.pl malgorzata.dawidowska@igcz.poznan.pl}},
+  da                         = {{2020-03-23}},
+  doc-delivery-number        = {{GY9HB}},
+  doi                        = {{10.3390/ijms19102858}},
+  funding-acknowledgement    = {{National Science Centre, Poland {[}2014/15/B/NZ2/03394, 2017/25/N/NZ2/01132]; National Centre of Research and Development {[}STRATEGMED3/304586/5/NCBR/2017]; National Science Center (ETIUDA scholarship) {[}2017/24/T/NZ5/00359]}},
+  funding-text               = {{This research was funded by grants from the National Science Centre, Poland (2014/15/B/NZ2/03394 and 2017/25/N/NZ2/01132), and the National Centre of Research and Development (STRATEGMED3/304586/5/NCBR/2017). Bronislawa Szarzynska-Zawadzka received financial resources as part of financing of a doctoral scholarship from the National Science Center (ETIUDA scholarship number: 2017/24/T/NZ5/00359).}},
+  journal-iso                = {{Int. J. Mol. Sci.}},
+  keywords                   = {{miRNA (microRNA); T-cell acute lymphoblastic leukemia (T-ALL); normalization of miRNA expression in RT-qPCR; endogenous controls; reference genes; tissue analysis; cell lines}},
+  keywords-plus              = {{REAL-TIME PCR; TUMOR-SUPPRESSOR; MICRORNA BIOGENESIS; EXPRESSION ANALYSIS; HOUSEKEEPING GENES; CANCER; NORMALIZATION; BIOMARKERS; QUANTIFICATION; PROGNOSIS}},
+  language                   = {{English}},
+  number-of-cited-references = {{65}},
+  oa                         = {{DOAJ Gold, Green Published}},
+  orcid-numbers              = {{Drobna, Monika/0000-0003-1671-9071 Daca-Roszak, Patrycja/0000-0003-1094-1333 Kosmalska, Maria/0000-0002-3951-8013 Jaksik, Roman/0000-0003-1866-6380 Szarzynska, Bronislawa/0000-0002-2879-1671 Dawidowska, Malgorzata/0000-0003-3486-6577}},
+  publisher                  = {{MDPI}},
+  research-areas             = {{Biochemistry \& Molecular Biology; Chemistry}},
+  times-cited                = {{4}},
+  type                       = {{Article}},
+  unique-id                  = {{ISI:000448951000013}},
+  usage-count-last-180-days  = {{4}},
+  usage-count-since-2013     = {{6}},
+  web-of-science-categories  = {{Biochemistry \& Molecular Biology; Chemistry, Multidisciplinary}},
+}
+﻿
+
+@Article{Bladen2018,
+  author                     = {Bladen, John C. and Wang, Jun and Sangaralingam, Ajanthah and Moosajee, Mariya and Fitchett, Caroline and Chelala, Claude and Beaconsfield, Michele and O'Toole, Edel A. and Philpott, Michael P. and Ezra, Daniel G.},
+  journal                    = {{SCIENTIFIC REPORTS}},
+  title                      = {{MicroRNA and transcriptome analysis in periocular Sebaceous Gland Carcinoma}},
+  year                       = {{2018}},
+  issn                       = {{2045-2322}},
+  month                      = {{MAY 14}},
+  volume                     = {{8}},
+  abstract                   = {{Sebaceous gland carcinoma (SGC) is a rare, but life-threatening
+   condition with a predilection for the periocular region. Eyelid SGC can
+   be broadly categorised into two subtypes, namely either nodular or
+   pagetoid with the latter being more aggressive and requiring radical
+   excision to save life. We have identified key altered microRNAs (miRNA)
+   involved in SGC shared by both subtypes, hsa-miR-34a-5p and
+   hsa-miR-16-5p. However, their gene targets BCL2 and MYC were
+   differentially expressed with both overexpressed in pagetoid but
+   unchanged in nodular suggesting different modes of action of these two
+   miRNAs on BCL/MYC expression. Hsa-miR-150p is nodular-specifically
+   overexpressed, and its target ZEB1 was significantly downregulated in
+   nodular SGC suggesting a tumour suppressor role. Invasive pagetoid
+   subtype demonstrated specific overexpression of hsa-miR-205 and
+   downregulation of hsa-miR-199a. Correspondingly, miRNA gene targets,
+   EZH2 (by hsa-miR-205) and CD44 (by hsa-miR-199a), were both
+   overexpressed in pagetoid SGC. CD44 has been identified as a potential
+   cancer stem cell marker in head and neck squamous cell carcinoma and its
+   overexpression in pagetoid cells represents a novel treatment target.
+   Aberrant miRNAs and their gene targets have been identified in both SGC
+   subtypes, paving the way for better molecular understanding of these
+   tumours and identifying new treatment targets.}},
+  address                    = {{MACMILLAN BUILDING, 4 CRINAN ST, LONDON N1 9XW, ENGLAND}},
+  affiliation                = {{Bladen, JC (Reprint Author), Queen Mary Univ London, Barts \& London Sch Med \& Dent, Blizard Inst, Ctr Cell Biol \& Cutaneous Res, London, England. Bladen, JC (Reprint Author), UCL Inst Ophthalmol, Dept Ocular Biol \& Therapeut, London, England. Bladen, JC (Reprint Author), Moorfields Eye Hosp, Eyelid Oncol, London, England. Bladen, John C.; O'Toole, Edel A.; Philpott, Michael P., Queen Mary Univ London, Barts \& London Sch Med \& Dent, Blizard Inst, Ctr Cell Biol \& Cutaneous Res, London, England. Wang, Jun; Sangaralingam, Ajanthah; Chelala, Claude, Queen Mary Univ London, Barts Canc Inst, Ctr Mol Oncol, London, England. Bladen, John C.; Moosajee, Mariya; Fitchett, Caroline; Ezra, Daniel G., UCL Inst Ophthalmol, Dept Ocular Biol \& Therapeut, London, England. Bladen, John C.; Beaconsfield, Michele; Ezra, Daniel G., Moorfields Eye Hosp, Eyelid Oncol, London, England.}},
+  article-number             = {{7531}},
+  author-email               = {{j.bladen@qmul.ac.uk}},
+  da                         = {{2020-03-23}},
+  doc-delivery-number        = {{GF4TZ}},
+  doi                        = {{10.1038/s41598-018-25900-z}},
+  funding-acknowledgement    = {{National Institute for Health Research (NIHR) Biomedical Research Centre based at Moorfields Eye Hospital NHS Foundation Trust; UCL Institute of Ophthalmology; Cancer Research UK Centre of Excellence Award {[}C16420/A18066]; Fight For Sight Fellowship, UK}},
+  funding-text               = {{We gratefully acknowledge the funding for a Fight For Sight Fellowship, UK, and the support of the National Institute for Health Research (NIHR) Biomedical Research Centre based at Moorfields Eye Hospital NHS Foundation Trust and UCL Institute of Ophthalmology. J.W. and C.C. acknowledge support from Cancer Research UK Centre of Excellence Award to Barts Cancer Centre {[}C16420/A18066].}},
+  journal-iso                = {{Sci Rep}},
+  keywords-plus              = {{TUMOR-SUPPRESSOR; TARGET; MIR-199A-3P; CELLS; DATABASE; MIR-143; CD44; PROLIFERATION; MUTATIONS; APOPTOSIS}},
+  language                   = {{English}},
+  number-of-cited-references = {{58}},
+  oa                         = {{DOAJ Gold, Green Published}},
+  orcid-numbers              = {{Wang, Jun/0000-0003-2509-9599 O'Toole, Edel/0000-0002-4084-4836}},
+  publisher                  = {{NATURE PUBLISHING GROUP}},
+  research-areas             = {{Science \& Technology - Other Topics}},
+  times-cited                = {{3}},
+  type                       = {{Article}},
+  unique-id                  = {{ISI:000431958000008}},
+  usage-count-last-180-days  = {{0}},
+  usage-count-since-2013     = {{4}},
+  web-of-science-categories  = {{Multidisciplinary Sciences}},
+}
+﻿
+
+@Article{AlSheikh2019,
+  author                     = {Al-Sheikh, Yazeed A. and Ghneim, Hazem K. and Alharbi, Khalid K. and Aboul-Soud, Mourad A. M.},
+  journal                    = {{INTERNATIONAL JOURNAL OF MOLECULAR MEDICINE}},
+  title                      = {{Screening for differentially-expressed microRNA biomarkers in Saudi colorectal cancer patients by small RNA deep sequencing}},
+  year                       = {{2019}},
+  issn                       = {{1107-3756}},
+  month                      = {{DEC}},
+  number                     = {{6}},
+  pages                      = {{2027-2036}},
+  volume                     = {{44}},
+  abstract                   = {{Colorectal cancer (CRC) is mostly diagnosed at late stages leading to
+   high mortality rates due to the scarcity of efficient screening
+   approaches exhibiting high diagnostic utility. The current study
+   employed a small-RNA deep-sequencing approach for screening microRNA
+   (miRNA) differentially expressed genes (DEGs), and evaluating their
+   potential as early diagnostic circulating biomarkers for CRC in clinical
+   plasma and tissue samples from a Saudi patient population. The cohort
+   followed a paired-study design composed of 20 CRC patients, providing
+   plasma (P) and tissue (T) samples of CRC, and adjacent normal mucosa
+   (CT). Also, control plasma (CP) samples were obtained from neoplasm-free
+   healthy individuals to compare its miRNA levels with those in P samples.
+   Illumina high-throughput (HiSeq 2000) sequencing was performed for the
+   identification of known and novel miRNA genes that were differentially
+   expressed in the plasma and tissues of CRC patients compared with CT and
+   CP controls. While we identified only one known (hsa-miR-182-5p,
+   significantly upregulated) and no novel DEGs at the most stringent
+   significance level (P<0.001) in the P-CP comparison, we found 3 and none
+   at P<0.01, 7 and 9 at P<0.05 level, respectively. In the T-CT
+   comparison, the results revealed 24 known and 196 novel miRNA DEGs
+   (P<0.001), 31 and 204 (P<0.01), 41 and 213 (P<0.05), respectively.
+   Sequencing data were then analyzed by bioinformatics for potential
+   diagnostic miRNAs. Network functional analysis for Gene Ontology (GO)
+   and Kyoto Encyclopedia of Genes and Genomes (KEGG) pathway implicated
+   two pathways rooted to signal transduction {[}Wnt and mitogen-activated
+   protein kinase (MAPK)] that were enriched in CRC patients. Our results
+   suggest that characterizing plasma and tissue profiles of CRC by deep
+   sequencing may be a good strategy for identifying known and novel miRNAs
+   and that the validated miRNAs described here may serve as potential
+   CRC-associated biomarkers. Further research is necessary for determining
+   their screen index values and diagnostic utility for the diagnosis of
+   CRC.}},
+  address                    = {{POB 18179, ATHENS, 116 10, GREECE}},
+  affiliation                = {{Aboul-Soud, MAM (Reprint Author), King Saud Univ, Coll Appl Med Sci, Dept Clin Lab Sci, POB 10219, Riyadh 11433, Saudi Arabia. Al-Sheikh, Yazeed A.; Ghneim, Hazem K.; Alharbi, Khalid K.; Aboul-Soud, Mourad A. M., King Saud Univ, Coll Appl Med Sci, Dept Clin Lab Sci, POB 10219, Riyadh 11433, Saudi Arabia.}},
+  author-email               = {{maboulsoud@ksu.edu.sa}},
+  da                         = {{2020-03-23}},
+  doc-delivery-number        = {{JU6YJ}},
+  doi                        = {{10.3892/ijmm.2019.4362}},
+  eissn                      = {{1791-244X}},
+  funding-acknowledgement    = {{National Science, Technology and Innovation strategic Plan (NSTIP) strategic technologies programs (MAARIFAH), KACST of the Kingdom of Saudi Arabia {[}11-MED1770-02]}},
+  funding-text               = {{The study was financially supported by the National Science, Technology and Innovation strategic Plan (NSTIP) strategic technologies programs (MAARIFAH), KACST (grant no. 11-MED1770-02) of the Kingdom of Saudi Arabia to YAAS.}},
+  journal-iso                = {{Int. J. Mol. Med.}},
+  keywords                   = {{colorectal cancer; microRNA; Biomarkers; MAPK; Wnt; deep sequencing; small RNA}},
+  keywords-plus              = {{CELL; PROLIFERATION; METASTASIS; DIAGNOSIS; SURVIVAL; INVASION}},
+  language                   = {{English}},
+  number-of-cited-references = {{47}},
+  oa                         = {{Green Published, Other Gold}},
+  publisher                  = {{SPANDIDOS PUBL LTD}},
+  research-areas             = {{Research \& Experimental Medicine}},
+  times-cited                = {{0}},
+  type                       = {{Article}},
+  unique-id                  = {{ISI:000501819500004}},
+  usage-count-last-180-days  = {{1}},
+  usage-count-since-2013     = {{1}},
+  web-of-science-categories  = {{Medicine, Research \& Experimental}},
+}
+﻿
+
+@Article{Uhr2019,
+  author                     = {Uhr, Katharina and Prager-van der Smissen, Wendy J. C. and Heine, Anouk A. J. and Ozturk, Bahar and van Jaarsveld, Marijn T. M. and Boersma, Antonius W. M. and Jager, Agnes and Wiemer, Erik A. C. and Smid, Marcel and Foekens, John A. and Martens, John W. M.},
+  journal                    = {{PLOS ONE}},
+  title                      = {{MicroRNAs as possible indicators of drug sensitivity in breast cancer cell lines}},
+  year                       = {{2019}},
+  issn                       = {{1932-6203}},
+  month                      = {{MAY 7}},
+  number                     = {{5}},
+  volume                     = {{14}},
+  abstract                   = {{MicroRNAs (miRNAs) regulate gene expression post-transcriptionally. In
+   this way they might influence whether a cell is sensitive or resistant
+   to a certain drug. So far, only a limited number of relatively small
+   scale studies comprising few cell lines and/or drugs have been
+   performed. To obtain a broader view on miRNAs and their association with
+   drug response, we investigated the expression levels of 411 miRNAs in
+   relation to drug sensitivity in 36 breast cancer cell lines. For this
+   purpose IC50 values of a drug screen involving 34 drugs were associated
+   with miRNA expression data of the same breast cancer cell lines. Since
+   molecular subtype of the breast cancer cell lines is considered a
+   confounding factor in drug association studies, multivariate analysis
+   taking subtype into account was performed on significant miRNA-drug
+   associations which retained 13 associations. These associations
+   consisted of 11 different miRNAs and eight different drugs (among which
+   Paclitaxel, Docetaxel and Veliparib). The taxanes, Paclitaxel and
+   Docetaxel, were the only drugs having miRNAs in common: hsa-miR-187-5p
+   and hsa-miR-106a-3p indicative of drug resistance while Paclitaxel
+   sensitivity alone associated with hsa-miR-556-5p. Tivantinib was
+   associated with hsa-let-7d-5p and hsa-miR-18a-5p for sensitivity and
+   hsa-miR-637 for resistance. Drug sensitivity was associated with
+   hsa-let-7a-5p for Bortezomib, hsa-miR-135a-3p for JNJ-707 and
+   hsa-miR-185-3p for Panobinostat. Drug resistance was associated with
+   hsa-miR-182-5p for Veliparib and hsa-miR-629-5p for Tipifarnib. Pathway
+   analysis for significant miRNAs was performed to reveal biological
+   roles, aiding to find a potential mechanistic link for the observed
+   associations with drug response. By doing so hsa-miR-187-5p was linked
+   to the cell cycle G2-M checkpoint in line with this checkpoint being the
+   target of taxanes. In conclusion, our study shows that miRNAs could
+   potentially serve as biomarkers for intrinsic drug resistance and that
+   pathway analyses can provide additional information in this context.}},
+  address                    = {{1160 BATTERY STREET, STE 100, SAN FRANCISCO, CA 94111 USA}},
+  affiliation                = {{Martens, JWM (Reprint Author), Erasmus Univ, Med Ctr, Erasmus MC Canc Inst, Dept Med Oncol \& Canc Genom Netherlands, Rotterdam, Netherlands. Uhr, Katharina; Prager-van der Smissen, Wendy J. C.; Heine, Anouk A. J.; Ozturk, Bahar; van Jaarsveld, Marijn T. M.; Boersma, Antonius W. M.; Jager, Agnes; Wiemer, Erik A. C.; Smid, Marcel; Foekens, John A.; Martens, John W. M., Erasmus Univ, Med Ctr, Erasmus MC Canc Inst, Dept Med Oncol \& Canc Genom Netherlands, Rotterdam, Netherlands.}},
+  article-number             = {{e0216400}},
+  author-email               = {{j.martens@erasmusmc.nl}},
+  da                         = {{2020-03-23}},
+  doc-delivery-number        = {{HX1JZ}},
+  doi                        = {{10.1371/journal.pone.0216400}},
+  funding-acknowledgement    = {{Daniel den Hoed Foundation, Rotterdam, the Netherlands; Cancer Genomics Netherlands - from the Netherlands Organization of Scientific Research (NWO); Dutch Cancer Society grantKWF Kankerbestrijding {[}EMCR 2007-3794]; H2020 ERC Advanced Grant {[}322737]}},
+  funding-text               = {{This study was financially supported by the Daniel den Hoed Foundation, Rotterdam, the Netherlands (KU, JAF) URL: https://www.danieldenhoedstichting.nl/. Further funding sources were from the Cancer Genomics Netherlands - a grant from the Netherlands Organization of Scientific Research (NWO) (JWMM), URL: http://cancergenomics.nl/; a Dutch Cancer Society grant (EMCR 2007-3794) (EACW, AWMB, MTMvJ) URL: https://www.kwf.nl/pages/default.aspx. JAF received partial support from the H2020 ERC Advanced Grant \#322737, URL: https://erc.europa.eu/funding/advanced-grants. The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript.}},
+  journal-iso                = {{PLoS One}},
+  keywords-plus              = {{MOLECULAR CYTOGENETIC ANALYSIS; HEPATOCELLULAR-CARCINOMA; PARP INHIBITORS; GENE; TUMOR; IDENTIFICATION; RESISTANCE; EXPRESSION; ESTROGEN; MECHANISMS}},
+  language                   = {{English}},
+  number-of-cited-references = {{83}},
+  oa                         = {{DOAJ Gold, Green Published}},
+  orcid-numbers              = {{jager, agnes/0000-0002-7713-1450 Wiemer, Erik/0000-0002-0673-7236 Smid, Marcel/0000-0003-0605-1901}},
+  publisher                  = {{PUBLIC LIBRARY SCIENCE}},
+  research-areas             = {{Science \& Technology - Other Topics}},
+  researcherid-numbers       = {{jager, agnes/V-6381-2017 }},
+  times-cited                = {{2}},
+  type                       = {{Article}},
+  unique-id                  = {{ISI:000467148400026}},
+  usage-count-last-180-days  = {{0}},
+  usage-count-since-2013     = {{1}},
+  web-of-science-categories  = {{Multidisciplinary Sciences}},
+}
+﻿
+
+@Article{Hsu2017,
+  author                     = {Hsu, Ya-Ling and Hung, Jen-Yu and Lee, Yen-Lung and Chen, Feng-Wei and Chang, Kuo-Feng and Chang, Wei-An and Tsai, Ying-Ming and Chong, Inn-Wen and Kuo, Po-Lin},
+  journal                    = {{ONCOTARGET}},
+  title                      = {{Identification of novel gene expression signature in lung adenocarcinoma by using next-generation sequencing data and bioinformatics analysis}},
+  year                       = {{2017}},
+  month                      = {{DEC 1}},
+  number                     = {{62}},
+  pages                      = {{104831-104854}},
+  volume                     = {{8}},
+  abstract                   = {{Lung adenocarcinoma is one of the leading causes of cancer-related death
+   worldwide. We showed transcriptomic profiles in three pairs of tumors
+   and adjacent non-tumor lung tissues using next-generation sequencing
+   (NGS) to screen protein-coding RNAs and microRNAs. Combined with
+   meta-analysis from the Oncomine and Gene Expression Omnibus (GEO)
+   databases, we identified a representative genetic expression signature
+   in lung adenocarcinoma. There were 9 upregulated genes, and 8
+   downregulated genes in lung adenocarcinoma. The analysis of the effects
+   from each gene expression on survival outcome indicated that 6 genes
+   (AGR2, SPDEF, CDKN2A, CLDN3, SFN, and PHLDA2) play oncogenic roles, and
+   7 genes (PDK4, FMO2, CPED1, GNG11, IL33, BTNL9, and FABP4) act as tumor
+   suppressors in lung adenocarcinoma. In addition, we also identified
+   putative genetic interactions, in which there were 5 upregulated
+   microRNAs with specific targets - hsa-miR-183-5p-BTNL9, hsa-miR-33b5p-
+   CPED1, hsa-miR-429-CPED1, hsa-miR-182-5p-FMO2, and hsa-miR-130b-5p-IL33.
+   These 5 microRNAs have been shown to be associated with tumorigenesis in
+   lung cancer. Our findings suggest that these genetic interactions play
+   important roles in the progression of lung adenocarcinoma. We propose
+   that this molecular change of genetic expression may represent a novel
+   signature in lung adenocarcinoma, which may be developed for diagnostic
+   and therapeutic strategies in the future.}},
+  address                    = {{6666 E QUAKER ST, STE 1, ORCHARD PARK, NY 14127 USA}},
+  affiliation                = {{Chong, IW (Reprint Author), Kaohsiung Med Univ Hosp, Div Pulm \& Crit Care Med, Dept Internal Med, Kaohsiung, Taiwan. Kuo, PL (Reprint Author), Kaohsiung Med Univ, Grad Inst Clin Med, Coll Med, Kaohsiung, Taiwan. Chong, IW (Reprint Author), Kaohsiung Med Univ, Dept Resp Therapy, Coll Med, Kaohsiung, Taiwan. Kuo, PL (Reprint Author), Kaohsiung Med Univ, Ctr Biomarkers \& Biotech Drugs, Kaohsiung, Taiwan. Kuo, PL (Reprint Author), Natl Sun Yat Sen Univ, Inst Med Sci \& Technol, Kaohsiung, Taiwan. Hsu, Ya-Ling; Tsai, Ying-Ming, Kaohsiung Med Univ, Grad Inst Med, Coll Med, Kaohsiung, Taiwan. Hung, Jen-Yu, Kaohsiung Med Univ, Sch Med, Coll Med, Kaohsiung, Taiwan. Hung, Jen-Yu; Chang, Wei-An; Tsai, Ying-Ming; Chong, Inn-Wen, Kaohsiung Med Univ Hosp, Div Pulm \& Crit Care Med, Dept Internal Med, Kaohsiung, Taiwan. Lee, Yen-Lung, Kaohsiung Med Univ Hosp, Div Thorac Surg, Dept Surg, Kaohsiung, Taiwan. Chen, Feng-Wei; Chang, Wei-An; Kuo, Po-Lin, Kaohsiung Med Univ, Grad Inst Clin Med, Coll Med, Kaohsiung, Taiwan. Chang, Kuo-Feng, Welgene Biotech Inc, Taipei, Taiwan. Chong, Inn-Wen, Kaohsiung Med Univ, Dept Resp Therapy, Coll Med, Kaohsiung, Taiwan. Kuo, Po-Lin, Kaohsiung Med Univ, Ctr Biomarkers \& Biotech Drugs, Kaohsiung, Taiwan. Kuo, Po-Lin, Natl Sun Yat Sen Univ, Inst Med Sci \& Technol, Kaohsiung, Taiwan.}},
+  author-email               = {{chong@kmu.edu.tw kuopolin@seed.net.tw}},
+  da                         = {{2020-03-23}},
+  doc-delivery-number        = {{FS1UI}},
+  doi                        = {{10.18632/oncotarget.21022}},
+  eissn                      = {{1949-2553}},
+  funding-acknowledgement    = {{Ministry of Science and TechnologyMinistry of Education, Culture, Sports, Science and Technology, Japan (MEXT) {[}MOST 106-2314-B-037-064, MOST 104-2320-B-037-014-MY3, MOST 104-2314-B-037-053-MY4, MOST 103-2320-B-037-006-MY3]; Kaohsiung Medical University ``Aim for the Top 500 Universities Grant{''} {[}KMU-TP105C05]; Kaohsiung Medical University ``Aim for the Top Journals Grant{''} {[}KMU-DT106005]; Kaohsiung Medical University Hospital Research Foundation {[}KMUH106-6R]}},
+  funding-text               = {{This study was supported by grants from the Ministry of Science and Technology (MOST 106-2314-B-037-064; MOST 104-2320-B-037-014-MY3; MOST 104-2314-B-037-053-MY4; MOST 103-2320-B-037-006-MY3), the Kaohsiung Medical University ``Aim for the Top 500 Universities Grant{''} (Grant No. KMU-TP105C05), the Kaohsiung Medical University ``Aim for the Top Journals Grant{''} (Grant No. KMU-DT106005), and the Kaohsiung Medical University Hospital Research Foundation (KMUH106-6R).}},
+  journal-iso                = {{Oncotarget}},
+  keywords                   = {{next-generation sequencing; bioinformatics; microRNA; messenger RNA; lung adenocarcinoma}},
+  keywords-plus              = {{OVARIAN-CANCER; POOR-PROGNOSIS; CELL-CYCLE; ETS FACTOR; SURVIVAL; STATISTICS; RESISTANCE; GROWTH; DOMAIN; EPIDEMIOLOGY}},
+  language                   = {{English}},
+  number-of-cited-references = {{92}},
+  oa                         = {{Green Published, Bronze, Other Gold}},
+  orcid-numbers              = {{Chang, Wei An/0000-0002-0049-5758}},
+  publisher                  = {{IMPACT JOURNALS LLC}},
+  research-areas             = {{Oncology; Cell Biology}},
+  times-cited                = {{15}},
+  type                       = {{Article}},
+  unique-id                  = {{ISI:000419563600012}},
+  usage-count-last-180-days  = {{1}},
+  usage-count-since-2013     = {{6}},
+  web-of-science-categories  = {{Oncology; Cell Biology}},
+}
+﻿
+
+@Article{Wang2014,
+  author                     = {Wang, Lin and Zhu, Miao-Jun and Ren, Ai-Min and Wu, Hong-Fei and Han, Wu-Mei and Tan, Ruo-Ying and Tu, Rui-Qin},
+  journal                    = {{PLOS ONE}},
+  title                      = {{A Ten-MicroRNA Signature Identified from a Genome-Wide MicroRNA Expression Profiling in Human Epithelial Ovarian Cancer}},
+  year                       = {{2014}},
+  issn                       = {{1932-6203}},
+  month                      = {{MAY 9}},
+  number                     = {{5}},
+  volume                     = {{9}},
+  abstract                   = {{Epithelial ovarian cancer (EOC) is the most common gynecologic
+   malignancy. To identify the micro-ribonucleic acids (miRNAs) expression
+   profile in EOC tissues that may serve as a novel diagnostic biomarker
+   for EOC detection, the expression of 1722 miRNAs from 15 normal ovarian
+   tissue samples and 48 ovarian cancer samples was profiled by using a
+   quantitative real-time polymerase chain reaction (qRT-PCR) assay. A
+   ten-microRNA signature (hsa-miR-1271-5p, hsa-miR-574-3p, hsa-miR-182-5p,
+   hsa-miR-183-5p, hsa-miR-96-5p, hsa-miR-15b-5p, hsa-miR-182-3p,
+   hsa-miR-141-5p, hsa-miR-130b-5p, and hsa-miR-135b-3p) was identified to
+   be able to distinguish human ovarian cancer tissues from normal tissues
+   with 97\% sensitivity and 92\% specificity. Two miRNA clusters of
+   miR183-96-183 (miR-96-5p, and miR-182, miR183) and miR200 (miR-141-5p,
+   miR200a, b, c and miR429) are significantly up-regulated in ovarian
+   cancer tissue samples compared to those of normal tissue samples,
+   suggesting theses miRNAs may be involved in ovarian cancer development.}},
+  address                    = {{1160 BATTERY STREET, STE 100, SAN FRANCISCO, CA 94111 USA}},
+  affiliation                = {{Tan, RY (Reprint Author), Biovue Technol China Ltd, Shanghai, Peoples R China. Wang, Lin; Ren, Ai-Min; Tu, Rui-Qin, Fudan Univ, Shanghai Zhongshan Hosp, Dept Obstet \& Gynecol, Shanghai 200433, Peoples R China. Zhu, Miao-Jun; Wu, Hong-Fei; Han, Wu-Mei; Tan, Ruo-Ying, Biovue Technol China Ltd, Shanghai, Peoples R China.}},
+  article-number             = {{e96472}},
+  author-email               = {{tan@biovuetech.com ruiqin@zs-hospital.sh.cn}},
+  da                         = {{2020-03-23}},
+  doc-delivery-number        = {{AI4LX}},
+  doi                        = {{10.1371/journal.pone.0096472}},
+  journal-iso                = {{PLoS One}},
+  keywords-plus              = {{PATHOGENESIS; STATISTICS; INVASION}},
+  language                   = {{English}},
+  number-of-cited-references = {{27}},
+  oa                         = {{DOAJ Gold, Green Published}},
+  publisher                  = {{PUBLIC LIBRARY SCIENCE}},
+  research-areas             = {{Science \& Technology - Other Topics}},
+  times-cited                = {{51}},
+  type                       = {{Article}},
+  unique-id                  = {{ISI:000336838000038}},
+  usage-count-last-180-days  = {{4}},
+  usage-count-since-2013     = {{23}},
+  web-of-science-categories  = {{Multidisciplinary Sciences}},
+}
+﻿
+
+@Article{He2019,
+  author                     = {He, Yu-hui and Deng, Yi-sen and Peng, Pan-xin and Wang, Ning and Wang, Jian-feng and Ding, Zhen-shan and Chen, Xing and Zhou, Xiao-feng},
+  journal                    = {{JOURNAL OF CELLULAR BIOCHEMISTRY}},
+  title                      = {{A novel messenger RNA and long noncoding RNA signature associated with the progression of nonmuscle invasive bladder cancer}},
+  year                       = {{2019}},
+  issn                       = {{0730-2312}},
+  month                      = {{MAY}},
+  number                     = {{5}},
+  pages                      = {{8101-8109}},
+  volume                     = {{120}},
+  abstract                   = {{Aim To explore the molecular mechanism of nonmuscle invasive bladder
+   cancer (NMIBC), matched normal, and cancer tissues of 10 NMIBC were
+   examined for RNA sequencing. Methods We profiled the messenger RNA
+   (mRNA) and long noncoding RNA (lncRNA) expression of patients with
+   NMIBC. Differentially expressed mRNAs and lncRNAs were screened between
+   cancer and normal tissues and validated by quantitative polymerase chain
+   reaction (qPCR), and lncRNA-mRNA-miRNA interaction network was
+   constructed. Results A total of 91 upregulated and 190 downregulated
+   genes and 34 upregulated and 58 downregulated lncRNAs were screened from
+   the sequencing result. The differentially expressed mRNAs were enriched
+   in focal adhesion, rap1 signaling pathway, Hippo signaling pathway,
+   PI3K-Akt signaling pathway, extracellular matrix (ECM)-receptor
+   interaction, Ras signaling pathway, and mitogen-activated protein
+   kinases signaling pathway, of which some pathways were involved in the
+   cancer development. In the RNA sequencing, KIT and laminin subunit gamma
+   gamma 3 (LAMC3) were significantly downregulated in the NMIBC group
+   compared with the normal group. The results of quantitative reverse
+   transcription PCR showed that the expression of LAMC3 and KIT were
+   significantly decreased in the NMIBC group compared with the normal
+   group. The lncRNA-mRNA-miRNA interaction network was constructed by
+   Cytoscape software to further investigate the interaction correlations.
+   The results implied that KIT and LAMC3 might regulate the lncRNAs (such
+   as ENST00000445707, ENST00000501122, ENST00000505254, ENST00000528986,
+   ENST00000557661, ENST00000602964, ENST00000614517, ENST00000620864, and
+   ENST00000623414) by the miRNAs (such as hsa-let-7f-2-3p,
+   hsa-miR-125a-3p, hsa-miR-134-3p, hsa-miR-191-5p, hsa-miR-210-5p,
+   hsa-miR-30a-5p, hsa-miR-30d-5p, hsa-miR-30e-5p, hsa-miR-92a-2-5p, and
+   hsa-miR-95-3p), and finally played a role in the development of NMIBC
+   cancer. Conclusion Altogether, our study preliminarily indicated that
+   KIT and LAMC3 might play a crucial role in the development of NMIBC
+   cancer via a complex mRNA-lncRNA-miRNA regulatory network.}},
+  address                    = {{111 RIVER ST, HOBOKEN 07030-5774, NJ USA}},
+  affiliation                = {{Zhou, XF (Reprint Author), China Japan Friendship Hosp, Dept Urol, 2 Yinghua East St,Chaoyang 100020, Beijing 100029, Peoples R China. He, Yu-hui; Deng, Yi-sen; Peng, Pan-xin; Zhou, Xiao-feng, Peking Univ, China Japan Friendship Sch Clin Med, Beijing, Peoples R China. He, Yu-hui; Deng, Yi-sen; Peng, Pan-xin; Wang, Jian-feng; Ding, Zhen-shan; Chen, Xing; Zhou, Xiao-feng, China Japan Friendship Hosp, Dept Urol, 2 Yinghua East St,Chaoyang 100020, Beijing 100029, Peoples R China. Wang, Ning, North China Univ Sci \& Technol, Coll Psychol, Tangshan, Peoples R China.}},
+  author-email               = {{dengmu186@163.com}},
+  da                         = {{2020-03-23}},
+  doc-delivery-number        = {{HO6VK}},
+  doi                        = {{10.1002/jcb.28089}},
+  eissn                      = {{1097-4644}},
+  funding-acknowledgement    = {{International S\&T Cooperation Program of China {[}2014DFE30010]}},
+  funding-text               = {{International S\&T Cooperation Program of China, Grant/Award Number: 2014DFE30010}},
+  journal-iso                = {{J. Cell. Biochem.}},
+  keywords                   = {{KIT; LAMC3; long noncoding RNAs; nonmuscle invasive bladder cancer; RNA sequencing}},
+  keywords-plus              = {{TRANSCRIPTOME; EXPRESSION; PROSTATE; CHAINS}},
+  language                   = {{English}},
+  number-of-cited-references = {{34}},
+  publisher                  = {{WILEY}},
+  research-areas             = {{Biochemistry \& Molecular Biology; Cell Biology}},
+  times-cited                = {{1}},
+  type                       = {{Article}},
+  unique-id                  = {{ISI:000461070700128}},
+  usage-count-last-180-days  = {{0}},
+  usage-count-since-2013     = {{3}},
+  web-of-science-categories  = {{Biochemistry \& Molecular Biology; Cell Biology}},
+}
+﻿
+
+@Article{Xu2020,
+  author                     = {Xu, Weiyu and Yu, Si and Xiong, Jianping and Long, Junyu and Zheng, Yongchang and Sang, Xinting},
+  journal                    = {{AGING-US}},
+  title                      = {{CeRNA regulatory network-based analysis to study the roles of noncoding RNAs in the pathogenesis of intrahepatic cholangiocellular carcinoma}},
+  year                       = {{2020}},
+  issn                       = {{1945-4589}},
+  month                      = {{JAN 31}},
+  number                     = {{2}},
+  pages                      = {{1047-1086}},
+  volume                     = {{12}},
+  abstract                   = {{To explore and understand the competitive mechanism of ceRNAs in
+   intrahepatic cholangiocarcinoma (ICC), we used bioinformatics analysis
+   methods to construct an ICC-related ceRNA regulatory network (ceRNET),
+   which contained 340 lncRNA-miRNA-mRNA regulatory relationships based on
+   the RNA expression datasets in the NCBI GEO database. We identified the
+   core regulatory pathway RP11-328K4.1-hsa-miR-27a-3p-PROS1, which is
+   related to ICC, for further validation by molecular biology assays. GO
+   analysis of 44 differentially expressed mRNAs in ceRNET revealed that
+   they were mainly enriched in biological processes including ``negative
+   regulation of epithelial cell proliferation{''} and ``positive
+   regulation of activated T lymphocyte proliferation.{''} KEGG analysis
+   showed that they were mainly enriched in the ``complement and
+   coagulation cascade{''} pathway. The molecular biology assay showed that
+   lncRNA RP11-328K4.1 expression was significantly lower in the cancerous
+   tissues and peripheral plasma of ICC patients than in normal controls
+   (p<0.05). In addition, hsa-miR27a-3p was found to be significantly
+   upregulated in the cancer tissues and peripheral plasma of ICC patients
+   (p<0.05). Compared to normal controls, the expression of PROS1 mRNA was
+   significantly downregulated in ICC patient cancer tissues (p<0.05) but
+   not in peripheral plasma (p>0.05). Furthermore, ROC analysis revealed
+   that RP11-328K4.1, hsa-miR-27a-3p, and PROS1 had significant diagnostic
+   value in ICC. We concluded that the upregulation of lncRNA RP11-328K4.1,
+   which might act as a miRNA sponge, exerts an antitumor effect in ICC by
+   eliminating the inhibition of PROS1 mRNA expression by oncogenic miRNA
+   hsa-miR-27a.}},
+  address                    = {{6666 E QUAKER ST, STE 1, ORCHARD PARK, NY 14127 USA}},
+  affiliation                = {{Zheng, YC; Sang, XT (Reprint Author), Chinese Acad Med Sci \& Peking Union Med Coll, Peking Union Med Coll Hosp, Dept Liver Surg, Beijing 100730, Peoples R China. Xu, Weiyu, Capital Med Univ, Beijing Friendship Hosp, Dept Gen Surg, Beijing 100050, Peoples R China. Yu, Si; Long, Junyu; Zheng, Yongchang; Sang, Xinting, Chinese Acad Med Sci \& Peking Union Med Coll, Peking Union Med Coll Hosp, Dept Liver Surg, Beijing 100730, Peoples R China. Xiong, Jianping, Capital Med Univ, Beijing Friendship Hosp, Dept Intervent Radiol, Beijing 100050, Peoples R China.}},
+  author-email               = {{zhengyongchang@pumch.cn sangxt@pumch.cn}},
+  da                         = {{2020-03-23}},
+  doc-delivery-number        = {{KI1PS}},
+  doi                        = {{10.18632/aging.102634}},
+  funding-acknowledgement    = {{Beijing Municipal Science and Technology Commission research fund {[}Z171100000417004]; Beijing Natural Science FoundationBeijing Natural Science Foundation {[}L172055]}},
+  funding-text               = {{This work was funded by the Beijing Municipal Science and Technology Commission research fund (No. Z171100000417004) and the Beijing Natural Science Foundation (No. L172055). These funds provided financial support for the data collection, data analysis and interpretation.}},
+  journal-iso                = {{Aging-US}},
+  keywords                   = {{intrahepatic cholangiocarcinoma; ceRNA; ceRNA regulatory network; biomarkers; prognosis}},
+  keywords-plus              = {{MESENCHYMAL TRANSITION; CELL PROLIFERATION; GENE-EXPRESSION; PROTEIN-S; CHOLANGIOCARCINOMA; CANCER; MIR-27A-3P; MANAGEMENT; SIGNATURES; CYTOSCAPE}},
+  language                   = {{English}},
+  number-of-cited-references = {{57}},
+  publisher                  = {{IMPACT JOURNALS LLC}},
+  research-areas             = {{Cell Biology; Geriatrics \& Gerontology}},
+  times-cited                = {{0}},
+  type                       = {{Article}},
+  unique-id                  = {{ISI:000511120700005}},
+  usage-count-last-180-days  = {{2}},
+  usage-count-since-2013     = {{2}},
+  web-of-science-categories  = {{Cell Biology; Geriatrics \& Gerontology}},
+}
+﻿
+
+@Article{Shangguan2019,
+  author                     = {Shangguan, Wen-Ji and Liu, Hai-Tao and Que, Zu-Jun and Qian, Fang-Fang and Liu, Ling-Shuang and Tian, Jian-Hui},
+  journal                    = {{EXPERIMENTAL AND THERAPEUTIC MEDICINE}},
+  title                      = {{TOB1-AS1 suppresses non-small cell lung cancer cell migration and invasion through a ceRNA network}},
+  year                       = {{2019}},
+  issn                       = {{1792-0981}},
+  month                      = {{DEC}},
+  number                     = {{6}},
+  pages                      = {{4249-4258}},
+  volume                     = {{18}},
+  abstract                   = {{Non-small cell lung cancer (NSCLC) is the leading cause of lung
+   cancer-associated mortality. Recent studies revealed that long
+   non-coding (lnc)RNAs have crucial roles in human cancers. The present
+   study was the first, to the best of our knowledge, to indicate that the
+   lncRNA transducer of ERBB2, 1-antisense 1 (TOB1-AS1) acts as a tumor
+   suppressor in NSCLC. Knockdown of TOB1-AS1 significantly induced NSCLC
+   cell migration, invasion and proliferation. It was also demonstrated
+   that the higher expression of TOB1-AS1 in NSCLC samples was associated
+   with longer overall survival time. Furthermore, a TOB1-AS1-mediated
+   competing endogenous RNA network in NSCLC was constructed, including
+   Homo sapiens (hsa)-microRNA (miR)-27a-3p, hsa-miR-23a-3p,
+   hsa-miR-23b-3p, hsa-miR-27b-3p, hsa-miR-23c, dynein cytoplasmic 2 light
+   intermediate chain 1, E4F transcription factor 1, TSPY-like 4, component
+   of oligomeric Golgi complex 7, inositol hexakisphosphate kinase 2 and
+   deltex E3 ubiquitin ligase 3. Of note, dysregulation of targets of
+   TOB1-AS1 was associated with the prognosis of NSCLC patients. The
+   present study suggested that TOB1-AS1 may serve as a novel biomarker for
+   NSCLC.}},
+  address                    = {{POB 18179, ATHENS, 116 10, GREECE}},
+  affiliation                = {{Liu, LS; Tian, JH (Reprint Author), Shanghai Univ Tradit Chinese Med, Longhua Hosp, Dept Oncol, 725 South Wanping Rd, Shanghai 200032, Peoples R China. Shangguan, Wen-Ji; Liu, Hai-Tao; Qian, Fang-Fang; Liu, Ling-Shuang; Tian, Jian-Hui, Shanghai Univ Tradit Chinese Med, Longhua Hosp, Dept Oncol, 725 South Wanping Rd, Shanghai 200032, Peoples R China. Shangguan, Wen-Ji, Shanghai Jiao Tong Univ, Sch Med, Renji Hosp, Dept Tradit Chinese Med, Shanghai 200127, Peoples R China. Que, Zu-Jun; Tian, Jian-Hui, Shanghai Univ Tradit Chinese Med, Longhua Hosp, Canc Inst Tradit Chinese Med, Shanghai 200032, Peoples R China.}},
+  author-email               = {{liuls107@163.com tjhhawk@shutcm.edu.cn}},
+  da                         = {{2020-03-23}},
+  doc-delivery-number        = {{JZ6OK}},
+  doi                        = {{10.3892/etm.2019.8103}},
+  eissn                      = {{1792-1015}},
+  funding-acknowledgement    = {{National Natural Science Foundation of ChinaNational Natural Science Foundation of China {[}81373621, 81774166]; Excellent Academic Leaders of Health and Family Planning System in Shanghai {[}2017BR044]; Clinical Science and Technology Innovation Project of the Science and Technology Commission of Shanghai Municipality {[}16401970800]; Shanghai Sailing Program {[}17YF1419700]}},
+  funding-text               = {{This work was supported by the National Natural Science Foundation of China (grant nos. 81373621 and 81774166), the Excellent Academic Leaders of Health and Family Planning System in Shanghai (grant no. 2017BR044), Clinical Science and Technology Innovation Project of the Science and Technology Commission of Shanghai Municipality (grant no. 16401970800) and was sponsored by the Shanghai Sailing Program (grant no. 17YF1419700).}},
+  journal-iso                = {{Exp. Ther. Med.}},
+  keywords                   = {{non-small cell lung cancer; long non-coding RNA; transducer of ERBB2 1 antisense 1; metastasis; competing endogenous RNA network}},
+  keywords-plus              = {{TUMOR-SUPPRESSOR; NONCODING RNAS; ERBB2.1 TOB1; IN-VITRO; LNCRNA; PROMOTES; METASTASIS; PROLIFERATION; PROGRESSION; TRANSDUCER}},
+  language                   = {{English}},
+  number-of-cited-references = {{47}},
+  oa                         = {{Bronze, Other Gold, Green Published}},
+  publisher                  = {{SPANDIDOS PUBL LTD}},
+  research-areas             = {{Research \& Experimental Medicine}},
+  times-cited                = {{0}},
+  type                       = {{Article}},
+  unique-id                  = {{ISI:000505222900008}},
+  usage-count-last-180-days  = {{2}},
+  usage-count-since-2013     = {{2}},
+  web-of-science-categories  = {{Medicine, Research \& Experimental}},
+}
+﻿
+
+@Article{Bibi2015,
+  author                     = {Bibi, Fehmida and Naseer, Muhammad I. and Alvi, Sana Akhtar and Yasir, Muhammad and Jiman-Fatani, Asif A. and Sawan, Ali and Abuzenadah, Adel M. and Al-Qahtani, Mohammed H. and Azhar, Esam I.},
+  journal                    = {{BMC GENOMICS}},
+  title                      = {{microRNA analysis of gastric cancer patients from Saudi Arabian population}},
+  year                       = {{2015}},
+  issn                       = {{1471-2164}},
+  month                      = {{NOV 30}},
+  number                     = {{9}},
+  volume                     = {{17}},
+  abstract                   = {{Background: The role of small non-coding microRNAs (miRNAs) in several
+   types of cancer has been evident. However, its expression studies have
+   never been performed in gastric cancer (GC) patients from Saudi
+   population. First time this study was conducted to identify miRNAs that
+   are differentially expressed in GC patients compared with normal
+   controls.
+   Methods: We investigated the role of miRNAs in GC patients using
+   formalin-fixed paraffin-embedded (FFPE) tissues of 34 samples from GC
+   patients (early stage = 7 and late-stage = 26) and 15 from normal
+   control. We have used miRNA microarray analysis and validated the
+   results by Real-time quantitative PCR (RT-qPCR).
+   Results: We obtained data of 1082 expressed genes, from cancer tissues
+   and noncancerous tissues (49 samples in total). Where 129 genes were
+   up-regulated (P > 0.05) and 953 genes (P > 0.05) were down-regulated in
+   49 FFPE tissue samples. Only 33 miRNAs had significant expression in
+   early and late-stage cancer tissues. After candidate miRNAs were
+   selected, RT-qPCR further confirmed that four miRNAs (hsa-miR-200c-3p,
+   hsa-miR-3613, hsa-miR-27b-3p, hsa-miR-4668-5p) were significantly
+   aberrant in GC tissues compared to the normal gastric tissues.
+   Conclusions: In this study we provide miRNAs profile of GC where many
+   miRNAs showed aberrant expression from normal tissues, suggesting their
+   involvement in the development and progression of gastric cancer. In
+   early and late-stage miR-200c-3p showed significant down regulation as
+   compare to control samples. Many of miRNAs reported in our study showing
+   up-regulation are new and not reported before may be due to population
+   difference. In conclusion, our results suggest that miR-200c-3p had
+   potential to use as diagnostic biomarker for distinguishing GC patients
+   from normal individuals and can be used for diagnosis of cancer at early
+   stage.}},
+  address                    = {{236 GRAYS INN RD, FLOOR 6, LONDON WC1X 8HL, ENGLAND}},
+  affiliation                = {{Bibi, F (Reprint Author), King Abdulaziz Univ, King Fahd Med Res Ctr, Special Infect Agents Unit, Jeddah 21589, Saudi Arabia. Bibi, Fehmida; Alvi, Sana Akhtar; Yasir, Muhammad; Azhar, Esam I., King Abdulaziz Univ, King Fahd Med Res Ctr, Special Infect Agents Unit, Jeddah 21589, Saudi Arabia. Naseer, Muhammad I.; Abuzenadah, Adel M.; Al-Qahtani, Mohammed H., King Abdulaziz Univ, CEGMR, Jeddah 21589, Saudi Arabia. Azhar, Esam I., King Abdulaziz Univ, Fac Appl Med Sci, Dept Med Lab Technol, Jeddah, Saudi Arabia. Jiman-Fatani, Asif A., King Abdulaziz Univ, Fac Med, Dept Med Microbiol \& Parasitol, Jeddah, Saudi Arabia. Sawan, Ali, King Abdulaziz Univ, Fac Med, Dept Anat Pathol, Jeddah, Saudi Arabia. Abuzenadah, Adel M., King Abdulaziz Univ, KACST Technol Innovat Ctr Personalized Med, Jeddah 21589, Saudi Arabia.}},
+  article-number             = {{751}},
+  author-email               = {{fehmeedaimran@yahoo.com}},
+  da                         = {{2020-03-23}},
+  doc-delivery-number        = {{V46NF}},
+  doi                        = {{10.1186/s12864-016-3090-7}},
+  funding-acknowledgement    = {{National Plan for Science, Technology and Innovation (MAARIFAH)-King Abdulaziz City for Science and Technology-the Kingdom of Saudi Arabia {[}12-BIO-2725-03]}},
+  funding-text               = {{This project was funded by the National Plan for Science, Technology and Innovation (MAARIFAH)-King Abdulaziz City for Science and Technology-the Kingdom of Saudi Arabia-award number (12-BIO-2725-03). The authors also, acknowledge with thanks Science and Technology Unit, King Abdulaziz University for technical support.}},
+  journal-iso                = {{BMC Genomics}},
+  keywords                   = {{Gastric cancer; MicroRNAs; Microarray; Real time PCR; Diagnostic biomarker}},
+  language                   = {{English}},
+  number-of-cited-references = {{52}},
+  oa                         = {{DOAJ Gold, Green Published}},
+  publisher                  = {{BIOMED CENTRAL LTD}},
+  research-areas             = {{Biotechnology \& Applied Microbiology; Genetics \& Heredity}},
+  researcherid-numbers       = {{Yasir, Muhammad/H-9889-2012 Bibi, Fehmida/H-9488-2012 Naseer, Muhammad Imran/H-9477-2012 Naseer, Muhammad Imran/AAG-4921-2020}},
+  times-cited                = {{14}},
+  type                       = {{Article}},
+  unique-id                  = {{ISI:000209890200005}},
+  usage-count-last-180-days  = {{0}},
+  usage-count-since-2013     = {{2}},
+  web-of-science-categories  = {{Biotechnology \& Applied Microbiology; Genetics \& Heredity}},
+}
+
+@Article{Bendall2014,
+  author    = {Bendall, Sean C and Davis, Kara L and Amir, El-ad David and Tadmor, Michelle D and Simonds, Erin F and Chen, Tiffany J and Shenfeld, Daniel K and Nolan, Garry P and Pe’er, Dana},
+  journal   = {Cell},
+  title     = {Single-cell trajectory detection uncovers progression and regulatory coordination in human B cell development},
+  year      = {2014},
+  number    = {3},
+  pages     = {714--725},
+  volume    = {157},
+  publisher = {Elsevier},
+}
+
+@Article{Tan2014,
+  author    = {Tan, Tuan Zea and Miow, Qing Hao and Miki, Yoshio and Noda, Tetsuo and Mori, Seiichi and Huang, Ruby Yun-Ju and Thiery, Jean Paul},
+  journal   = {EMBO molecular medicine},
+  title     = {Epithelial-mesenchymal transition spectrum quantification and its efficacy in deciphering survival and drug responses of cancer patients},
+  year      = {2014},
+  number    = {10},
+  pages     = {1279--1293},
+  volume    = {6},
+  publisher = {EMBO Press},
+}
+
+@Article{Gregory2008,
+  author    = {Gregory, Philip A and Bert, Andrew G and Paterson, Emily L and Barry, Simon C and Tsykin, Anna and Farshid, Gelareh and Vadas, Mathew A and Khew-Goodall, Yeesim and Goodall, Gregory J},
+  journal   = {Nature cell biology},
+  title     = {The miR-200 family and miR-205 regulate epithelial to mesenchymal transition by targeting ZEB1 and SIP1},
+  year      = {2008},
+  number    = {5},
+  pages     = {593--601},
+  volume    = {10},
+  publisher = {Nature Publishing Group},
+}
+
+@Article{Le2015,
+  author    = {Le, Thuc Duy and Liu, Lin and Zhang, Junpeng and Liu, Bing and Li, Jiuyong},
+  journal   = {Briefings in bioinformatics},
+  title     = {From miRNA regulation to miRNA--TF co-regulation: computational approaches and challenges},
+  year      = {2015},
+  number    = {3},
+  pages     = {475--496},
+  volume    = {16},
+  publisher = {Oxford University Press},
+}
+
+@Article{Zhang2014,
+  author    = {Zhang, Junpeng and Le, Thuc Duy and Liu, Lin and Liu, Bing and He, Jianfeng and Goodall, Gregory J and Li, Jiuyong},
+  journal   = {Bioinformatics},
+  title     = {Inferring condition-specific miRNA activity from matched miRNA and mRNA expression data},
+  year      = {2014},
+  number    = {21},
+  pages     = {3070--3077},
+  volume    = {30},
+  publisher = {Oxford University Press},
+}
+
+@Article{Zhang2018,
+  author    = {Zhang, Junpeng and Liu, Lin and Li, Jiuyong and Le, Thuc Duy},
+  journal   = {Bioinformatics},
+  title     = {LncmiRSRN: identification and analysis of long non-coding RNA related miRNA sponge regulatory network in human cancer},
+  year      = {2018},
+  number    = {24},
+  pages     = {4232--4240},
+  volume    = {34},
+  publisher = {Oxford University Press},
+}
+
+@Article{Zhang2017,
+  author    = {Zhang, Junpeng and Le, Thuc Duy and Liu, Lin and Li, Jiuyong},
+  journal   = {BMC bioinformatics},
+  title     = {Inferring miRNA sponge co-regulation of protein-protein interactions in human breast cancer},
+  year      = {2017},
+  number    = {1},
+  pages     = {243},
+  volume    = {18},
+  publisher = {Springer},
+}
+
+@Article{Chen2018,
+  author          = {Chen, Lujia and Lu, Xinghua},
+  title           = {Discovering functional impacts of miRNAs in cancers using a causal deep learning model.},
+  journal         = {BMC medical genomics},
+  year            = {2018},
+  volume          = {11},
+  pages           = {116},
+  month           = dec,
+  issn            = {1755-8794},
+  abstract        = {Micro-RNAs (miRNAs) play a significant role in regulating gene expression under physiological and pathological conditions such as cancers. However, it remains a challenging problem to discover the target messenger RNAs (mRNAs) of a miRNA in a data driven fashion. On one hand, sequence-based methods for predicting miRNA targets tend to make too many false positive calls. On the other hand, analyzing expression correlation between miRNAs and mRNAs cannot establish whether relationship between a pair of correlated miRNA and mRNA is causal. In this study, we designed a deep learning model, referred to as miRNA causal deep net (mCADET), which aims to explicitly represent two types of statistical relationships between miRNAs and mRNAs: correlation resulting from confounded co-regulation and correlation as a result of causal regulation. The model utilizes a deep neural network to simulate transcription mechanism that leads to co-expression of miRNA and mRNA, and, in addition, it also contains directed edges from miRNAs to mRNAs to capture causal relationships among them. We trained the mCADET model using pan-cancer miRNA and mRNA data from The Cancer Genome Atlas (TCGA) project to investigate mechanism of co-expression and causal interactions between miRNAs and mRNAs. Quantitative analyses of the results indicate that the mCADET significantly outperforms conventional deep learning models when modeling combined miRNA and mRNA expression data, indicating its superior capability of capturing the high-order statistical structures in the data. Qualitative analysis of predicted targets of miRNAs indicate that predictions by mCADET agree well with existing knowledge. Finally, the predictions by mCADET have a significantly lower false discovery rate and better overall accuracy in comparison to sequence-based and correlation-based methods when comparing to experimental results. The mCADET model can simultaneously infer the states of cellular signaling system regulating co-expression of miRNAs and mRNAs, while capturing their causal relationships in a data-driven fashion.},
+  chemicals       = {MicroRNAs, RNA, Messenger, RNA, Neoplasm},
+  citation-subset = {IM},
+  completed       = {2019-07-16},
+  country         = {England},
+  doi             = {10.1186/s12920-018-0432-0},
+  issn-linking    = {1755-8794},
+  issue           = {Suppl 6},
+  keywords        = {Deep Learning; Humans; MicroRNAs; Models, Genetic; Models, Statistical; Neoplasms, genetics; RNA, Messenger; RNA, Neoplasm; Causal discovery; Deep learning; miRNA and mRNA},
+  nlm-id          = {101319628},
+  owner           = {NLM},
+  pii             = {10.1186/s12920-018-0432-0},
+  pmc             = {PMC6311958},
+  pmid            = {30598118},
+  pubmodel        = {Electronic},
+  pubstatus       = {epublish},
+  revised         = {2019-10-08},
+}
+﻿
+
+@Article{Lee2016,
+  author                     = {Lee, Eunjee and Ito, Koichi and Zhao, Yong and Schadt, Eric E. and Irie, Hanna Y. and Zhu, Jun},
+  journal                    = {{BIOINFORMATICS}},
+  title                      = {{Inferred miRNA activity identifies miRNA-mediated regulatory networks underlying multiple cancers}},
+  year                       = {{2016}},
+  issn                       = {{1367-4803}},
+  month                      = {{JAN 1}},
+  number                     = {{1}},
+  pages                      = {{96-105}},
+  volume                     = {{32}},
+  abstract                   = {{Motivation: MicroRNAs (miRNAs) play a key role in regulating tumor
+   progression and metastasis. Identifying key miRNAs, defined by their
+   functional activities, can provide a deeper understanding of biology of
+   miRNAs in cancer. However, miRNA expression level cannot accurately
+   reflect miRNA activity.
+   Results: We developed a computational approach, ActMiR, for identifying
+   active miRNAs and miRNA-mediated regulatory mechanisms. Applying ActMiR
+   to four cancer datasets in The Cancer Genome Atlas (TCGA), we showed
+   that (i) miRNA activity was tumor subtype specific; (ii) genes
+   correlated with inferred miRNA activities were more likely to enrich for
+   miRNA binding motifs; (iii) expression levels of these genes and
+   inferred miRNA activities were more likely to be negatively correlated.
+   For the four cancer types in TCGA we identified 77-229 key miRNAs for
+   each cancer subtype and annotated their biological functions. The
+   miRNA-target pairs, predicted by our ActMiR algorithm but not by
+   correlation of miRNA expression levels, were experimentally validated.
+   The functional activities of key miRNAs were further demonstrated to be
+   associated with clinical outcomes for other cancer types using
+   independent datasets. For ER-/HER2(-) breast cancers, we identified
+   activities of key miRNAs let-7d and miR-18a as potential prognostic
+   markers and validated them in two independent ER-/HER2(-) breast cancer
+   datasets. Our work provides a novel scheme to facilitate our
+   understanding of miRNA. In summary, inferred activity of key miRNA
+   provided a functional link to its mediated regulatory network, and can
+   be used to robustly predict patient's survival.}},
+  address                    = {{GREAT CLARENDON ST, OXFORD OX2 6DP, ENGLAND}},
+  affiliation                = {{Zhu, J (Reprint Author), Icahn Sch Med Mt Sinai, Dept Genet \& Genom Sci, New York, NY 10029 USA. Lee, Eunjee; Zhao, Yong; Schadt, Eric E.; Zhu, Jun, Icahn Sch Med Mt Sinai, Dept Genet \& Genom Sci, New York, NY 10029 USA. Lee, Eunjee; Schadt, Eric E.; Zhu, Jun, Icahn Sch Med Mt Sinai, Icahn Inst Genom \& Multiscale Biol, New York, NY 10029 USA. Ito, Koichi; Irie, Hanna Y., Icahn Sch Med Mt Sinai, Dept Med Hematol \& Med Oncol, New York, NY 10029 USA. Schadt, Eric E.; Irie, Hanna Y.; Zhu, Jun, Icahn Sch Med Mt Sinai, Tisch Canc Inst, New York, NY 10029 USA.}},
+  author-email               = {{jun.zhu@mssm.edu}},
+  da                         = {{2020-03-25}},
+  doc-delivery-number        = {{DB2RX}},
+  doi                        = {{10.1093/bioinformatics/btv531}},
+  eissn                      = {{1460-2059}},
+  funding-acknowledgement    = {{National Institute of HealthUnited States Department of Health \& Human ServicesNational Institutes of Health (NIH) - USA {[}CA163772, AG046170, CA172460, HG008451]}},
+  funding-text               = {{The work was partially supported by the National Institute of Health (CA163772, AG046170, CA172460 and HG008451).}},
+  journal-iso                = {{Bioinformatics}},
+  keywords-plus              = {{HUMAN BREAST-CANCER; MESSENGER-RNA; EXPRESSION PROFILES; MICRORNA EXPRESSION; CELL-PROLIFERATION; MIR-200 FAMILY; GLIOBLASTOMA; SPECIFICITY; PROGRESSION; METASTASIS}},
+  language                   = {{English}},
+  number-of-cited-references = {{52}},
+  oa                         = {{Green Published, Bronze}},
+  publisher                  = {{OXFORD UNIV PRESS}},
+  research-areas             = {{Biochemistry \& Molecular Biology; Biotechnology \& Applied Microbiology; Computer Science; Mathematical \& Computational Biology; Mathematics}},
+  times-cited                = {{12}},
+  type                       = {{Article}},
+  unique-id                  = {{ISI:000368357800012}},
+  usage-count-last-180-days  = {{0}},
+  usage-count-since-2013     = {{5}},
+  web-of-science-categories  = {{Biochemical Research Methods; Biotechnology \& Applied Microbiology; Computer Science, Interdisciplinary Applications; Mathematical \& Computational Biology; Statistics \& Probability}},
+}
+﻿
+
+@Article{Zhao2015,
+  author                     = {Zhao, Xing-Ming and Liu, Ke-Qin and Zhu, Guanghui and He, Feng and Duval, Beatrice and Richer, Jean-Michel and Huang, De-Shuang and Jiang, Chang-Jun and Hao, Jin-Kao and Chen, Luonan},
+  journal                    = {{BIOINFORMATICS}},
+  title                      = {{Identifying cancer-related microRNAs based on gene expression data}},
+  year                       = {{2015}},
+  issn                       = {{1367-4803}},
+  month                      = {{APR 15}},
+  number                     = {{8}},
+  pages                      = {{1226-1234}},
+  volume                     = {{31}},
+  abstract                   = {{Motivation: MicroRNAs (miRNAs) are short non-coding RNAs that play
+   important roles in post-transcriptional regulations as well as other
+   important biological processes. Recently, accumulating evidences
+   indicate that miRNAs are extensively involved in cancer. However, it is
+   a big challenge to identify which miRNAs are related to which cancer
+   considering the complex processes involved in tumors, where one miRNA
+   may target hundreds or even thousands of genes and one gene may regulate
+   multiple miRNAs. Despite integrative analysis of matched gene and miRNA
+   expression data can help identify cancer-associated miRNAs, such kind of
+   data is not commonly available. On the other hand, there are huge amount
+   of gene expression data that are publicly accessible. It will
+   significantly improve the efficiency of characterizing miRNA's function
+   in cancer if we can identify cancer miRNAs directly from gene expression
+   data.
+   Results: We present a novel computational framework to identify the
+   cancer-related miRNAs based solely on gene expression profiles without
+   requiring either miRNA expression data or the matched gene and miRNA
+   expression data. The results on multiple cancer datasets show that our
+   proposed method can effectively identify cancer-related miRNAs with
+   higher precision compared with other popular approaches. Furthermore,
+   some of our novel predictions are validated by both differentially
+   expressed miRNAs and evidences from literature, implying the predictive
+   power of our proposed method. In addition, we construct a
+   cancer-miRNA-pathway network, which can help explain how miRNAs are
+   involved in cancer.}},
+  address                    = {{GREAT CLARENDON ST, OXFORD OX2 6DP, ENGLAND}},
+  affiliation                = {{Zhao, XM (Reprint Author), Tongji Univ, Sch Elect \& Informat Engn, Shanghai 201804, Peoples R China. Zhao, Xing-Ming; He, Feng; Huang, De-Shuang; Jiang, Chang-Jun, Tongji Univ, Sch Elect \& Informat Engn, Shanghai 201804, Peoples R China. Liu, Ke-Qin, Wake Forest Sch Med, Ctr Bioinformat \& Syst Biol, Dept Radiol, Winston Salem, NC 27157 USA. Liu, Ke-Qin; Duval, Beatrice; Richer, Jean-Michel; Hao, Jin-Kao, Univ Angers, LERIA, F-49045 Angers 01, France. Zhu, Guanghui, Shanghai Univ, Dept Math, Shanghai 200444, Peoples R China. Chen, Luonan, Chinese Acad Sci, Shanghai Inst Biol Sci, Key Lab Syst Biol, Shanghai 200031, Peoples R China.}},
+  author-email               = {{liukeq@gmail.com}},
+  da                         = {{2020-03-25}},
+  doc-delivery-number        = {{CI0UK}},
+  doi                        = {{10.1093/bioinformatics/btu811}},
+  eissn                      = {{1460-2059}},
+  funding-acknowledgement    = {{Strategic Priority Research Program of the Chinese Academy of SciencesChinese Academy of Sciences {[}XDB13040700]; National Natural Science Foundation of ChinaNational Natural Science Foundation of China {[}91130032, 61103075]; Innovation Program of Shanghai Municipal Education CommissionInnovation Program of Shanghai Municipal Education Commission {[}13ZZ072]; Shanghai Pujiang ProgramShanghai Pujiang Program {[}13PJD032]}},
+  funding-text               = {{This work was partly supported by Strategic Priority Research Program of the Chinese Academy of Sciences {[}XDB13040700]; National Natural Science Foundation of China {[}91130032, 61103075]; Innovation Program of Shanghai Municipal Education Commission {[}13ZZ072] and Shanghai Pujiang Program {[}13PJD032].}},
+  journal-iso                = {{Bioinformatics}},
+  keywords-plus              = {{TUMOR-SUPPRESSOR; LUNG-CANCER; METASTASIS; PROFILES; PATHWAYS; GROWTH; IDENTIFICATION; PROGRESSION; SIGNATURES; MIR-137}},
+  language                   = {{English}},
+  number-of-cited-references = {{65}},
+  oa                         = {{Other Gold}},
+  publisher                  = {{OXFORD UNIV PRESS}},
+  research-areas             = {{Biochemistry \& Molecular Biology; Biotechnology \& Applied Microbiology; Computer Science; Mathematical \& Computational Biology; Mathematics}},
+  researcherid-numbers       = {{Hao, J.K./AAC-1611-2020}},
+  times-cited                = {{37}},
+  type                       = {{Article}},
+  unique-id                  = {{ISI:000354453700010}},
+  usage-count-last-180-days  = {{0}},
+  usage-count-since-2013     = {{18}},
+  web-of-science-categories  = {{Biochemical Research Methods; Biotechnology \& Applied Microbiology; Computer Science, Interdisciplinary Applications; Mathematical \& Computational Biology; Statistics \& Probability}},
+}
+﻿
+
+@Article{Volinia2010,
+  author                     = {Volinia, Stefano and Visone, Rosa and Galasso, Marco and Rossi, Elda and Croce, Carlo M.},
+  journal                    = {{BIOINFORMATICS}},
+  title                      = {{Identification of microRNA activity by Targets' Reverse EXpression}},
+  year                       = {{2010}},
+  issn                       = {{1367-4803}},
+  month                      = {{JAN 1}},
+  number                     = {{1}},
+  pages                      = {{91-97}},
+  volume                     = {{26}},
+  abstract                   = {{Motivation: Non-coding microRNAs (miRNAs) act as regulators of global
+   protein output. While their major effect is on protein levels of target
+   genes, it has been proven that they also specifically impact on the
+   messenger RNA level of targets. Prominent interest in miRNAs strongly
+   motivates the need for increasing the options available to detect their
+   cellular activity.
+   Results: We used the effect of miRNAs over their targets for the
+   detection of miRNA activity using mRNAs expression profiles. Here we
+   describe the method, called T-REX (from Targets' Reverse EXpression),
+   compare it to other similar applications, show its effectiveness and
+   apply it to build activity maps. We used six different target
+   predictions from each of four algorithms: TargetScan, PicTar,
+   DIANA-microT and DIANA Union. First, we proved the sensitivity and
+   specificity of our technique in miRNA over-expression and knock-out
+   animal models. Then, we used whole transcriptome data from acute myeloid
+   leukemia to show that we could identify critical miRNAs in a real life,
+   complex, clinically relevant dataset. Finally, we studied 66 different
+   cellular conditions to confirm and extend the current knowledge on the
+   role of miRNAs in cellular physiology and in cancer.}},
+  address                    = {{GREAT CLARENDON ST, OXFORD OX2 6DP, ENGLAND}},
+  affiliation                = {{Volinia, S (Reprint Author), Univ Ferrara, Dept Morphol \& Embryol, DAMA, I-44100 Ferrara, Italy. Volinia, Stefano; Galasso, Marco, Univ Ferrara, Dept Morphol \& Embryol, DAMA, I-44100 Ferrara, Italy. Volinia, Stefano; Visone, Rosa; Croce, Carlo M., Ohio State Univ, Ctr Comprehens Canc, Columbus, OH 43210 USA. Rossi, Elda, CINECA, Bologna, Italy.}},
+  author-email               = {{s.volinia@unife.it}},
+  da                         = {{2020-03-25}},
+  doc-delivery-number        = {{537MD}},
+  doi                        = {{10.1093/bioinformatics/btp598}},
+  eissn                      = {{1460-2059}},
+  funding-acknowledgement    = {{AIRC (Italian Association for Cancer Research)Associazione Italiana per la Ricerca sul Cancro (AIRC); BioPharmaNet (Rete Alta Tecnologia dell' Emilia Romagna)}},
+  funding-text               = {{AIRC (Italian Association for Cancer Research) and BioPharmaNet (Rete Alta Tecnologia dell' Emilia Romagna) grants (to S. V.).}},
+  journal-iso                = {{Bioinformatics}},
+  keywords-plus              = {{ACUTE MYELOID-LEUKEMIA; GENE-EXPRESSION; TUMOR-SUPPRESSOR; CANCER; SIGNATURES; MIR-221; TOOLS; RNAS; P53; PROLIFERATION}},
+  language                   = {{English}},
+  number-of-cited-references = {{57}},
+  oa                         = {{Green Published, Bronze}},
+  orcid-numbers              = {{Volinia, Stefano/0000-0003-0910-3893 Young, Richard A/0000-0001-8855-8647 Volinia, Stefano/0000-0003-0910-3893 VISONE, Rosa/0000-0002-4993-0220 Galasso, Marco/0000-0003-2655-4792}},
+  publisher                  = {{OXFORD UNIV PRESS}},
+  research-areas             = {{Biochemistry \& Molecular Biology; Biotechnology \& Applied Microbiology; Computer Science; Mathematical \& Computational Biology; Mathematics}},
+  researcherid-numbers       = {{visone, rosa/K-7910-2016 Volinia, Stefano/AAA-9264-2019 Young, Richard A/F-6495-2012 Volinia, Stefano/A-3029-2010 Galasso, Marco/K-2037-2016}},
+  times-cited                = {{29}},
+  type                       = {{Article}},
+  unique-id                  = {{ISI:000273116100013}},
+  usage-count-last-180-days  = {{0}},
+  usage-count-since-2013     = {{6}},
+  web-of-science-categories  = {{Biochemical Research Methods; Biotechnology \& Applied Microbiology; Computer Science, Interdisciplinary Applications; Mathematical \& Computational Biology; Statistics \& Probability}},
+}
+
+@Article{Lu2016,
+  author    = {Lu, Liangqun and McCurdy, Sara and Huang, Sijia and Zhu, Xun and Peplowska, Karolina and Tiirikainen, Maarit and Boisvert, William A and Garmire, Lana X},
+  title     = {Time Series miRNA-mRNA integrated analysis reveals critical miRNAs and targets in macrophage polarization},
+  journal   = {Scientific reports},
+  year      = {2016},
+  volume    = {6},
+  pages     = {37446},
+  publisher = {Nature Publishing Group},
+}
+
+@Article{Kang2019,
+  author  = {Kang, Hyejin and Ahn, Hongryul and Jo, Kyuri and Oh, Minsik and Kim, Sun},
+  title   = {mirTime: identifying condition-specific targets of microRNA in time-series transcript data using Gaussian process model and spherical vector clustering},
+  journal = {Bioinformatics},
+  year    = {2019},
+}
+﻿
+
+@Article{Puchinskaya2019,
+  author                     = {Puchinskaya, M.},
+  journal                    = {{ANNALS OF ONCOLOGY}},
+  title                      = {{Patterns of N-cadherin (N-cad) and vimentin (Vim) expression as a sign of epithelial-mesenchymal transition (EMT) in prostate cancer (PCa)}},
+  year                       = {{2019}},
+  issn                       = {{0923-7534}},
+  month                      = {{NOV}},
+  note                       = {{Conference on Molecular Analysis for Personalised Therapy (MAP), London, ENGLAND, NOV 07-09, 2019}},
+  number                     = {{7}},
+  volume                     = {{30}},
+  address                    = {{GREAT CLARENDON ST, OXFORD OX2 6DP, ENGLAND}},
+  affiliation                = {{Puchinskaya, M., Minsk City Clin Oncol Dispensary, Out Patient Dept, Minsk, BELARUS.}},
+  article-number             = {{UNSP mdz413.040}},
+  da                         = {{2020-03-25}},
+  doc-delivery-number        = {{JN2XN}},
+  doi                        = {{10.1093/annonc/mdz413.040}},
+  eissn                      = {{1569-8041}},
+  funding-acknowledgement    = {{Belarusian Republican Foundation for Fundamental Research}},
+  funding-text               = {{Belarusian Republican Foundation for Fundamental Research.}},
+  journal-iso                = {{Ann. Oncol.}},
+  language                   = {{English}},
+  meeting                    = {{35P}},
+  number-of-cited-references = {{0}},
+  oa                         = {{Bronze}},
+  publisher                  = {{OXFORD UNIV PRESS}},
+  research-areas             = {{Oncology}},
+  times-cited                = {{0}},
+  type                       = {{Meeting Abstract}},
+  unique-id                  = {{ISI:000496763900035}},
+  usage-count-last-180-days  = {{1}},
+  usage-count-since-2013     = {{1}},
+  web-of-science-categories  = {{Oncology}},
+}
+﻿
+
+@Article{Shu2019,
+  author                     = {Shu, Weiguo and Douglas, Diana and Kumari, Sangeeta and Romero, Luis and Rodriguez, Luis G. and Zou, Chaozhong and Newman, Robert},
+  journal                    = {{CANCER RESEARCH}},
+  title                      = {{Development of a novel VIM-RFP reporter line for colorectal cancer EMT study and drug discovery}},
+  year                       = {{2019}},
+  issn                       = {{0008-5472}},
+  month                      = {{JUL}},
+  note                       = {{AACR Annual Meeting on Bioinformatics, Convergence Science, and Systems Biology, Atlanta, GA, MAR 29-APR 03, 2019}},
+  number                     = {{13, S}},
+  volume                     = {{79}},
+  address                    = {{615 CHESTNUT ST, 17TH FLOOR, PHILADELPHIA, PA 19106-4404 USA}},
+  affiliation                = {{Shu, Weiguo; Douglas, Diana; Kumari, Sangeeta; Romero, Luis; Rodriguez, Luis G.; Zou, Chaozhong; Newman, Robert, ATCC, Gaithersburg, MD USA.}},
+  da                         = {{2020-03-25}},
+  doc-delivery-number        = {{JA8VR}},
+  doi                        = {{10.1158/1538-7445.SABCS18-1884}},
+  eissn                      = {{1538-7445}},
+  journal-iso                = {{Cancer Res.}},
+  language                   = {{English}},
+  meeting                    = {{1884}},
+  number-of-cited-references = {{0}},
+  oa                         = {{Other Gold}},
+  organization               = {{Amer Assoc Canc Res}},
+  publisher                  = {{AMER ASSOC CANCER RESEARCH}},
+  research-areas             = {{Oncology}},
+  times-cited                = {{0}},
+  type                       = {{Meeting Abstract}},
+  unique-id                  = {{ISI:000488129904395}},
+  usage-count-last-180-days  = {{0}},
+  usage-count-since-2013     = {{0}},
+  web-of-science-categories  = {{Oncology}},
+}
+
+@Article{Chen2013,
+  author   = {Chen, Edward Y. and Tan, Christopher M. and Kou, Yan and Duan, Qiaonan and Wang, Zichen and Meirelles, Gabriela Vaz and Clark, Neil R. and Ma’ayan, Avi},
+  journal  = {BMC Bioinformatics},
+  title    = {Enrichr: interactive and collaborative HTML5 gene list enrichment analysis tool},
+  year     = {2013},
+  issn     = {1471-2105},
+  number   = {1},
+  pages    = {128},
+  volume   = {14},
+  abstract = {System-wide profiling of genes and proteins in mammalian cells produce lists of differentially expressed genes/proteins that need to be further analyzed for their collective functions in order to extract new knowledge. Once unbiased lists of genes or proteins are generated from such experiments, these lists are used as input for computing enrichment with existing lists created from prior knowledge organized into gene-set libraries. While many enrichment analysis tools and gene-set libraries databases have been developed, there is still room for improvement.},
+  refid    = {Chen2013},
+  url      = {https://doi.org/10.1186/1471-2105-14-128},
+}
+
+@Article{Le2015a,
+  author  = {Thuc Duy Le and Junpeng Zhang and Lin Liu and Huawen Liu and Jiuyong Li},
+  journal = {PLoS ONE},
+  title   = {miRLAB: An R Based Dry Lab for Exploring miRNA-mRNA Regulatory Relationships},
+  year    = {2015},
+  number  = {12},
+  pages   = {e0145386},
+  volume  = {10},
+  url     = {http://dx.doi.org/10.1371%2Fjournal.pone.0145386},
+}
+
+@Article{Khan2017,
+  author   = {Khan, Aziz and Mathelier, Anthony},
+  journal  = {BMC Bioinformatics},
+  title    = {Intervene: a tool for intersection and visualization of multiple gene or genomic region sets},
+  year     = {2017},
+  issn     = {1471-2105},
+  number   = {1},
+  pages    = {287},
+  volume   = {18},
+  abstract = {A common task for scientists relies on comparing lists of genes or genomic regions derived from high-throughput sequencing experiments. While several tools exist to intersect and visualize sets of genes, similar tools dedicated to the visualization of genomic region sets are currently limited.},
+  refid    = {Khan2017},
+  url      = {https://doi.org/10.1186/s12859-017-1708-7},
+}
+
+@Article{Chen2013a,
+  author   = {Chen, Xiaowei and Slack, Frank J. and Zhao, Hongyu},
+  title    = {{Joint analysis of expression profiles from multiple cancers improves the identification of microRNA–gene interactions}},
+  journal  = {Bioinformatics},
+  year     = {2013},
+  volume   = {29},
+  number   = {17},
+  pages    = {2137-2145},
+  month    = {06},
+  issn     = {1367-4803},
+  abstract = {{Motivation: MicroRNAs (miRNAs) play a crucial role in tumorigenesis and development through their effects on target genes. The characterization of miRNA–gene interactions will lead to a better understanding of cancer mechanisms. Many computational methods have been developed to infer miRNA targets with/without expression data. Because expression datasets are in general limited in size, most existing methods concatenate datasets from multiple studies to form one aggregated dataset to increase sample size and power. However, such simple aggregation analysis results in identifying miRNA–gene interactions that are mostly common across datasets, whereas specific interactions may be missed by these methods. Recent releases of The Cancer Genome Atlas data provide paired expression profiling of miRNAs and genes in multiple tumors with sufficiently large sample size. To study both common and cancer-specific interactions, it is desirable to develop a method that can jointly analyze multiple cancers to study miRNA–gene interactions without combining all the data into one single dataset.Results: We developed a novel statistical method to jointly analyze expression profiles from multiple cancers to identify miRNA–gene interactions that are both common across cancers and specific to certain cancers. The benefit of this joint analysis approach is demonstrated by both simulation studies and real data analysis of The Cancer Genome Atlas datasets. Compared with simple aggregate analysis or single sample analysis, our method can effectively use the shared information among different but related cancers to improve the identification of miRNA–gene interactions. Another useful property of our method is that it can estimate similarity among cancers through their shared miRNA–gene interactions.Availability and implementation: The program, MCMG, implemented in R is available at http://bioinformatics.med.yale.edu/group/.Contact:hongyu.zhao@yale.edu}},
+  doi      = {10.1093/bioinformatics/btt341},
+  eprint   = {https://academic.oup.com/bioinformatics/article-pdf/29/17/2137/659783/btt341.pdf},
+  url      = {https://doi.org/10.1093/bioinformatics/btt341},
+}
+
+@Article{Liu2015,
+  author    = {Liu, Ching-Yi and Lin, Hsi-Hui and Tang, Ming-Jer and Wang, Yang-Kao},
+  title     = {Vimentin contributes to epithelial-mesenchymal transition cancer cell mechanics by mediating cytoskeletal organization and focal adhesion maturation},
+  journal   = {Oncotarget},
+  year      = {2015},
+  volume    = {6},
+  number    = {25965826},
+  pages     = {15966--15983},
+  month     = jun,
+  issn      = {1949-2553},
+  abstract  = {Modulations of cytoskeletal organization and focal adhesion turnover correlate to tumorigenesis and epithelial-mesenchymal transition (EMT), the latter process accompanied by the loss of epithelial markers and the gain of mesenchymal markers (e.g., vimentin). Clinical microarray results demonstrated that increased levels of vimentin mRNA after chemotherapy correlated to a poor prognosis of breast cancer patients. We hypothesized that vimentin mediated the reorganization of cytoskeletons to maintain the mechanical integrity in EMT cancer cells. By using knockdown strategy, the results showed reduced cell proliferation, impaired wound healing, loss of directional migration, and increased large membrane extension in MDA-MB 231 cells. Vimentin depletion also induced reorganization of cytoskeletons and reduced focal adhesions, which resulted in impaired mechanical strength because of reduced cell stiffness and contractile force. In addition, overexpressing vimentin in MCF7 cells increased cell stiffness, elevated cell motility and directional migration, reoriented microtubule polarity, and increased EMT phenotypes due to the increased β1-integrin and the loss of junction protein E-cadherin. The EMT-related transcription factor slug was also mediated by vimentin. The current study demonstrated that vimentin serves as a regulator to maintain intracellular mechanical homeostasis by mediating cytoskeleton architecture and the balance of cell force generation in EMT cancer cells.},
+  comment   = {25965826[pmid]
+PMC4599250[pmcid]},
+  database  = {PubMed},
+  keywords  = {cell stiffness, epithelial-mesenchymal transition (EMT), focal adhesions, microtubule, vimentin, Breast Neoplasms/*metabolism/*pathology, Cell Adhesion/physiology, Cell Line, Tumor, Cell Movement/physiology, Cell Proliferation/physiology, Cytoskeleton/*metabolism/pathology, Epithelial-Mesenchymal Transition/physiology, Female, Focal Adhesions/*physiology, Gene Knockdown Techniques, Humans, MCF-7 Cells, Microtubules/metabolism/pathology, Vimentin/deficiency/genetics/*metabolism},
+  language  = {eng},
+  publisher = {Impact Journals LLC},
+  url       = {https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4599250/},
+}
+
+@Article{Cursons2018,
+  author        = {Joseph Cursons and Katherine A. Pillman and Kaitlin G. Scheer and Philip A. Gregory and Momeneh Foroutan and Soroor Hediyeh-Zadeh and John Toubia and Edmund J. Crampin and Gregory J. Goodall and Cameron P. Bracken and Melissa J. Davis},
+  title         = {Combinatorial Targeting by MicroRNAs Co-ordinates Post-transcriptional Control of EMT},
+  journal       = {Cell Systems},
+  year          = {2018},
+  volume        = {7},
+  number        = {1},
+  pages         = {77 - 91.e7},
+  issn          = {2405-4712},
+  __markedentry = {[cifam001:6]},
+  abstract      = {Summary
+MicroRNAs (miRNAs) are important post-transcriptional regulators of gene expression, functioning in part by facilitating the degradation of target mRNAs. They have an established role in controlling epithelial-mesenchymal transition (EMT), a reversible phenotypic program underlying normal and pathological processes. Many studies demonstrate the role of individual miRNAs using overexpression at levels greatly exceeding physiological abundance. This can influence transcripts with relatively poor targeting and may in part explain why over 130 different miRNAs are directly implicated as EMT regulators. Analyzing a human mammary cell model of EMT we found evidence that a set of miRNAs, including the miR-200 and miR-182/183 family members, co-operate in post-transcriptional regulation, both reinforcing and buffering transcriptional output. Investigating this, we demonstrate that combinatorial treatment altered cellular phenotype with miRNA concentrations much closer to endogenous levels and with less off-target effects. This suggests that co-operative targeting by miRNAs is important for their physiological function and future work classifying miRNAs should consider such combinatorial effects.},
+  doi           = {https://doi.org/10.1016/j.cels.2018.05.019},
+  keywords      = {epithelial-mesenchymal transition, microRNA, post-transcriptional regulation, transforming growth factor β, exon-intron split analysis},
+  url           = {http://www.sciencedirect.com/science/article/pii/S2405471218302370},
+}
+
+@Comment{jabref-meta: databaseType:bibtex;}
+
+@Comment{jabref-meta: fileDirectoryLatex-andres-DESKTOP-Q29KL15:
+C:UsersandresOneDrive - University of South AustraliaPhD UNISAICPseqICPAndres PaperAndresLaTeX v1;
+}
+
+@Comment{jabref-meta: grouping:
+0 AllEntriesGroup:;
+1 StaticGroup:Markings\;2\;1\;\;\;\;;
+2 StaticGroup:[cifam001:]\;2\;1\;\;\;\;;
+2 StaticGroup:cifam001:6\;2\;1\;\;\;\;;
+}
