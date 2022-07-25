@@ -113,12 +113,12 @@ CreatePPIRank <- function(geneIDs = NULL, PPImatrix = NULL){
   colnames(PPIrank) <- IdSource
 
   In <- PPI_net%>%
-    count(.[[col_input]],name = "n.in")
+    dplyr::count(.[[col_input]],name = "n.in")
 
   colnames(In)[1] <- IdSource
 
   Out <-PPI_net%>%
-    count(.[[col_output]],name = "n.out")
+    dplyr::count(.[[col_output]],name = "n.out")
   colnames(Out)[1] <- IdSource
 
   PPIrank <- left_join(x = PPIrank,y = In, by = IdSource)
