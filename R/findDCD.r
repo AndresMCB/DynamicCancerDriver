@@ -358,5 +358,4 @@ findDCD <- function(GeneExpression, z=NULL, pathCovariate =NULL
   outcome$z <- event$z
   return(outcome)
 
-
 }

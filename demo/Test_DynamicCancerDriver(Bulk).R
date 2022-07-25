@@ -1,11 +1,11 @@
 #### ----- Script to test DynamicCancerDriver package ------ ####
 #
 #  This script follows the procedure described in the
-#  Bioinformatic-Oxford Paper.
+#  Briefings in Functional Genomics -Oxford Paper.
 #
 #
+#rm(list = ls())
 
-rm(list = ls())
 if (!requireNamespace("devtools", quietly = TRUE))
   install.packages("devtools")
 
