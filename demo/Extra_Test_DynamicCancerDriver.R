@@ -19,16 +19,12 @@ if (!requireNamespace("AMCBGeneUtils", quietly = TRUE))
 if (!requireNamespace("DynamicCancerDriver", quietly = TRUE))
   devtools::install_github(repo = "AndresMCB/DynamicCancerDriver")
 
-if (!requireNamespace("SCORPIUS", quietly = TRUE))
-  install.packages("SCORPIUS")
-
 if (!require("BiocManager", quietly = TRUE))
   install.packages("BiocManager")
 
 if (!require("TCGAbiolinks", quietly = TRUE))
   BiocManager::install("TCGAbiolinks")
 
-library(SCORPIUS)
 library(monocle3)
 library(DynamicCancerDriver)
 library(tidyverse)
@@ -82,6 +78,15 @@ DCD.ESR1time_SC <- findDCD(GeneExpression = GSE75688_TPM_tumor
                            , alpha = 0.05)
 
 DCD.ESR1time_SC$res$summary
+data(CGC.driverNames,package = "DynamicCancerDriver")
+intersect(DCD.ESR1time_SC$res$CDinfer$Ensembl.ID
+          ,CGC.driverNames$Ensembl.ID)
+length(intersect(DCD.ESR1time_SC$res$CDinfer$Ensembl.ID
+                 ,CGC.driverNames$Ensembl.ID))/
+  length(DCD.ESR1time_SC$res$CDinfer$Ensembl.ID)
+write.csv(DCD.ESR1time_SC$res$CDinfer
+          ,file = "supplementary table 10 - dynamic cancer drivers ESR1time(SC).csv")
+
 #  Find Dynamic Cancer Drivers (BULK data), PPI top 40%
 DCD.ESR1time_Bulk <- findDCD(GeneExpression = TCGA_BRCA
                              , pathCovariate = "ESR1"
@@ -100,6 +105,8 @@ for (i in top) {
                      ,aux$Ensembl.ID[index]))
 }
 ESR1BulkPerfomance
+write.csv(DCD.ESR1time_Bulk$res$CDinfer
+          ,file = "supplementary table 11 - dynamic cancer drivers ESR1time(Bulk).csv")
 
 #####---Additional experiment 2: DEG analysis (normal-cancer) ---#####
 # Please download the full TCGA-BRCA data from
@@ -137,11 +144,11 @@ dataDEGs <- TCGAanalyze_DEA(mat1 = t(normal),
                             method = "glmLRT")
 
 # loading the discovered DCD from our original experiments
-# wdir <- getwd()
-# DCD.HER2_bulk <-
-#   read.csv(paste0(wdir,"/supplementary table 8 - dynamic cancer drivers HER2time(Bulk).csv"))
-# DCD.VIM_bulk <-
-#   read.csv(paste0(wdir,"/supplementary table 9 - dynamic cancer drivers VIMtime(Bulk).csv"))
+ wdir <- getwd()
+ DCD.HER2_bulk <-
+   read.csv(paste0(wdir,"/supplementary table 8 - dynamic cancer drivers HER2time(Bulk).csv"))
+ DCD.VIM_bulk <-
+   read.csv(paste0(wdir,"/supplementary table 9 - dynamic cancer drivers VIMtime(Bulk).csv"))
 
 # Analysing top 100 inferred DCD
 DCD.HER2noDEG <- setdiff(DCD.HER2_bulk$HGNC.symbol[1:100]
@@ -152,23 +159,16 @@ DCD.VIMnoDEG <- setdiff(DCD.VIM_bulk$HGNC.symbol[1:100]
 intersect(DCD.HER2noDEG, CGC.driverNames$HGNC.symbol)
 intersect(DCD.VIMnoDEG, CGC.driverNames$HGNC.symbol)
 
-# 40 Breast Cancer Drivers
-# from https://www.nature.com/articles/ncomms11479.pdf
-BRCA.40CD <-c("SMAD4","USP9X","FOXP1","MEN1", "MLLT4", "TBL1XR1"
-              ,"ERBB2","PIK3R1","KDM6A","BRCA1","TP53","ARID1A"
-              ,"NF1","SF3B1","MAP2K4","RB1","CDH1","CDKN1B","PIK3CA"
-              ,"KMT2C","AGTR2","FOXO3","PTEN","BRCA2","AKT1","TBX3"
-              ,"CHEK2","CBFB","NCOR1" ,"KRAS","CDKN2A","RUNX1"
-              ,"ZFP36L1","GATA3","MAP3K1","GPS2","CTCF","CTNNA1"
-              ,"BAP1","PBRM1")
-intersect(DCD.HER2noDEG, BRCA.40CD)
-intersect(DCD.VIMnoDEG, BRCA.40CD)
+data(CGC.Breast)
+
+intersect(DCD.HER2noDEG, CGC.Breast$HGNC.symbol)
+intersect(DCD.VIMnoDEG, CGC.Breast$HGNC.symbol)
 
 
 #####---Additional experiment 3: Regulatory relationships in DCD top 100 ---#####
 # loading highly confident grn from http://www.grndb.com/
-# wdir <- getwd()
-# BRCA_TCGA.regulons <- read.delim(paste0(wdir,"/BRCA_TCGA-regulons.txt"))
+ wdir <- getwd()
+ BRCA_TCGA.regulons <- read.delim(paste0(wdir,"/BRCA_TCGA-regulons.txt"))
 
 # keep only confidence == "High"
 BRCA_TCGA.regulons <- BRCA_TCGA.regulons%>%
@@ -176,75 +176,30 @@ BRCA_TCGA.regulons <- BRCA_TCGA.regulons%>%
   dplyr::select(TF, gene, NES, Confidence)
 
 #bulk
-aux <- union (DCD.HER2_bulk$HGNC.symbol[1:100], BRCA.40CD)
+aux <- intersect(DCD.HER2_bulk$HGNC.symbol, CGC.Breast$HGNC.symbol)
+aux <- union (DCD.HER2_bulk$HGNC.symbol[1:200], aux)
 regulons.HER2_bulk <- BRCA_TCGA.regulons%>%
   dplyr::filter(TF %in% aux, gene %in% aux)%>%
-  mutate(TF.is40CD = TF %in% BRCA.40CD, .before = 2)%>%
-  mutate(gene.is40CD = gene %in% BRCA.40CD, .before = 4)
-
-aux <- union (DCD.VIM_bulk$HGNC.symbol[1:100], BRCA.40CD)
-regulons.VIM_bulk <- BRCA_TCGA.regulons%>%
-  dplyr::filter(TF %in% aux, gene %in% aux)%>%
-  mutate(TF.is40CD = TF %in% BRCA.40CD, .before = 2)%>%
-  mutate(gene.is40CD = gene %in% BRCA.40CD, .before = 4)
+  mutate(TF.isCGC = TF %in% CGC.Breast$HGNC.symbol, .before = 2)%>%
+  mutate(gene.isCGC = gene %in% CGC.Breast$HGNC.symbol, .before = 4)
 
 # Single Cell
-aux <- union (DCD.HER2time_SC$res$CDinfer$HGNC.symbol[1:100], BRCA.40CD)
+aux <- intersect (DCD.HER2time_SC$res$CDinfer$HGNC.symbol
+              , CGC.Breast$HGNC.symbol)
+aux <- union (DCD.HER2time_SC$res$CDinfer$HGNC.symbol[1:200]
+                  , aux)
 
 regulons.HER2_SC <- BRCA_TCGA.regulons%>%
   dplyr::filter(TF %in% aux, gene %in% aux)%>%
-  mutate(TF.is40CD = TF %in% BRCA.40CD, .before = 2)%>%
-  mutate(gene.is40CD = gene %in% BRCA.40CD, .before = 4)
+  mutate(TF.isCGC = TF %in% CGC.Breast$HGNC.symbol, .before = 2)%>%
+  mutate(gene.isCGC = gene %in% CGC.Breast$HGNC.symbol, .before = 4)
 
-
-aux <- union (DCD.VIMtime_SC$res$CDinfer$HGNC.symbol[1:100], BRCA.40CD)
-
-regulons.VIM_SC <- BRCA_TCGA.regulons%>%
-  dplyr::filter(TF %in% aux, gene %in% aux)%>%
-  mutate(TF.is40CD = TF %in% BRCA.40CD, .before = 2)%>%
-  mutate(gene.is40CD = gene %in% BRCA.40CD, .before = 4)
 
 write.csv(regulons.HER2_bulk, file = "regulons.HER2_bulk.csv")
-write.csv(regulons.VIM_bulk, file = "regulons.VIM_bulk.csv")
 write.csv(regulons.HER2_SC, file = "regulons.HER2_SC.csv")
-write.csv(regulons.VIM_SC, file = "regulons.VIM_SC.csv")
+
 
 #####---Additional experiment 4: Performance for a provided pseudotime ---#####
-
-# SCORPIUS
-space <- reduce_dimensionality(GSE75688_TPM_tumor,  "spearman", ndim = 317)
-set.seed(1)
-traj <- SCORPIUS::infer_trajectory(space)
-sum(duplicated(traj$time))
- draw_trajectory_plot(
-   space,
-   #progression_group = group_name,
-   path = traj$path,
-   contour = TRUE
- )
-
-DCD.HER2scorpius_SC <- findDCD(GeneExpression = GSE75688_TPM_tumor
-                             , pathCovariate = "HER2"
-                             , z = scale(traj$time)
-                             , PPItop = 0.4
-                             , findEvent = T
-                             , project = "BRCA")
-
-DCD.VIMscorpius_SC <- findDCD(GeneExpression = GSE75688_TPM_tumor
-                               , pathCovariate = "VIM"
-                               , z = scale(traj$time)
-                               , PPItop = 0.4
-                               , findEvent = T
-                               , project = "BRCA")
-jaccard_similarity(DCD.VIMscorpius_SC$res$CDinfer$Ensembl.ID
-                   ,DCD.HER2scorpius_SC$res$CDinfer$Ensembl.ID)
-
-aux1 <- intersect(DCD.HER2scorpius_SC$res$CDinfer$Ensembl.ID
-                  , CGC.driverNames$Ensembl.ID)
-aux2 <- intersect(DCD.VIMscorpius_SC$res$CDinfer$Ensembl.ID
-                  , CGC.driverNames$Ensembl.ID)
-jaccard_similarity(aux1,aux2)
-
 # Monocle 3
 
 cds <- new_cell_data_set(t(GSE75688_TPM_tumor))
@@ -253,6 +208,8 @@ cds <- preprocess_cds(cds, num_dim = 100)
 ## Step 3: Reduce the dimensions using UMAP
 cds <- reduce_dimension(cds, reduction_method = "UMAP")
 ## Step 4: Cluster the cells
+# Note: for consistency in results, please choose
+# the rightmost node as zero time
 cds <- cluster_cells(cds)
 ## Step 5: Learn a graph
 cds <- learn_graph(cds)
