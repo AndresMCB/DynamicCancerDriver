@@ -2,9 +2,12 @@
 
 library(tidyverse)
 
-# loading highly confident grn from http://www.grndb.com/
-wdir <- getwd()
-BRCA_TCGA.regulons <- read.delim(paste0(wdir,"/BRCA_TCGA-regulons.txt"))
+# loading highly confident grn (from http://www.grndb.com/)
+
+aux <- system.file("extdata/"
+                   , "BRCA_TCGA-regulons.txt"
+                   , package = "DynamicCancerDriver")
+BRCA_TCGA.regulons <- read.delim(aux)
 
 # keep only confidence == "High"
 BRCA_TCGA.regulons <- BRCA_TCGA.regulons%>%
@@ -13,12 +16,19 @@ BRCA_TCGA.regulons <- BRCA_TCGA.regulons%>%
 
 
 # loading the discovered DCD from our original experiments
-wdir <- getwd()
-DCD.HER2_SC <-
-  read.csv(paste0(wdir,"/supplementary table 1 - dynamic cancer drivers HER2time(SC).csv"))
-DCD.HER2_bulk <-
-  read.csv(paste0(wdir,"/supplementary table 8 - dynamic cancer drivers HER2time(Bulk).csv"))
+aux <- system.file("Supplementary/"
+                           , "supplementary table 1 - dynamic cancer drivers HER2time(SC).csv"
+                           , package = "DynamicCancerDriver")
 
+DCD.HER2_SC <- read.csv(aux)
+
+
+aux <- system.file("Supplementary/"
+                   , "supplementary table 8 - dynamic cancer drivers HER2time(Bulk).csv"
+                   , package = "DynamicCancerDriver")
+DCD.HER2_bulk <- read.csv(aux)
+rm(aux)
+data(CGC.Breast)
 
 #bulk
 aux <- intersect(DCD.HER2_bulk$HGNC.symbol, CGC.Breast$HGNC.symbol)
