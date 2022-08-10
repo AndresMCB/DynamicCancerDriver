@@ -1,5 +1,14 @@
 # DynamicCancerDriver
 DynamicCancerDriver package contains functions to identify genes driving one or more bio-pathological transitions during cancer progression. Formally, we name a gene driving one or more core processes over cancer progression as dynamic cancer driver. 
+### Note
+Please find the results of our experiments in the folder [inst/Supplementary/](inst/Supplementary/). You can also access them from R by using the name of the file. For example:
+
+```R
+aux <- system.file("Supplementary/"
+                   , "supplementary table 8 - dynamic cancer drivers HER2time(Bulk).csv"
+                   , package = "DynamicCancerDriver")
+DCD.HER2_bulk <- read.csv(aux)
+```
 
 ## Introduction 
 Our method takes gene expression data from cross-sectional studies,
