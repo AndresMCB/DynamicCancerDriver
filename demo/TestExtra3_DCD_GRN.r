@@ -1,8 +1,14 @@
-#####---Additional experiment: Regulatory relationships in DCD top 100 ---#####
+#####---Additional experiment 3: Regulatory relationships in DCD top 100 ---#####
+#* regulatory relationships between the top 200 of DCDs
+#* and the set (not restricted to the top 200 DCDs) of
+#* CGC Breast Cancer drivers detected by our method
+#* (when using “HER2time(SC)” and “HER2time(Bulk)”
+#* as the path covariates respectively).
+#
 
 library(tidyverse)
 
-# loading highly confident grn (from http://www.grndb.com/)
+# loading highly confident grn  (BRCA_TCGA from http://www.grndb.com/)
 
 aux <- system.file("extdata/"
                    , "BRCA_TCGA-regulons.txt"
@@ -39,9 +45,9 @@ regulons.HER2_bulk <- BRCA_TCGA.regulons%>%
   mutate(gene.isCGC = gene %in% CGC.Breast$HGNC.symbol, .before = 4)
 
 # Single Cell
-aux <- intersect (DCD.HER2time_SC$res$CDinfer$HGNC.symbol
+aux <- intersect (DCD.HER2_SC$HGNC.symbol
                   , CGC.Breast$HGNC.symbol)
-aux <- union (DCD.HER2time_SC$res$CDinfer$HGNC.symbol[1:200]
+aux <- union (DCD.HER2_SC$HGNC.symbol[1:200]
               , aux)
 
 regulons.HER2_SC <- BRCA_TCGA.regulons%>%
@@ -49,8 +55,7 @@ regulons.HER2_SC <- BRCA_TCGA.regulons%>%
   mutate(TF.isCGC = TF %in% CGC.Breast$HGNC.symbol, .before = 2)%>%
   mutate(gene.isCGC = gene %in% CGC.Breast$HGNC.symbol, .before = 4)
 
-
-write.csv(regulons.HER2_bulk
-          , file = "Supplementary table 10 –regulons.HER2_bulk.csv")
 write.csv(regulons.HER2_SC
-          , file = "Supplementary table 11regulons.HER2_SC.csv")
+          , file = "Supplementary table 10 - DCD(HER2_SC) Reg. relationships.csv")
+write.csv(regulons.HER2_bulk
+          , file = "Supplementary table 11 - DCD(HER2_Bulk) Reg. relationships.csv")
