@@ -37,7 +37,7 @@ R (>=4.1.0), devtools(>=2.4.2), Rtools (>=4.0), Bioconductor (>=3.14), phenopath
  tidyverse(>= 1.3.1) are  required.
 We also use some utilities from another of our packages ([AMCBGeneUtils](https://github.com/AndresMCB/AMCBGeneUtils)).
 
-1. Please download and install Rtools 4.0 from https://cran.r-project.org/bin/windows/Rtools/, remove the incompatible version from your PATH.
+1. Please download and install Rtools from https://cran.r-project.org/bin/windows/Rtools (step only required for windows).
 
 2. Please install devtools 
 
@@ -45,12 +45,12 @@ We also use some utilities from another of our packages ([AMCBGeneUtils](https:/
 install.packages("devtools")
 ```
 
-3. Install DynamicCancerDriver package from github repository 
+3. Install DynamicCancerDriverKm package from github repository 
 ```R
-devtools::install_github('AndresMCB/DynamicCancerDriver')
+devtools::install_github('AndresMCB/DynamicCancerDriverKM')
 ```
 
-4. Please install DynamicCancerDriver additional packages required as follows: 
+4. Please install DynamicCancerDriverKM additional packages required as follows: 
 ```R
 devtools::install_github('AndresMCB/AMCBGeneUtils')
 
@@ -61,6 +61,6 @@ BiocManager::install("phenopath")
 
 ```
 ## Documentation 
-Detailed information about the functions implemented in PTC can be found in the [user manual](DynamicCancerDriver_1.4.1.pdf)
+Detailed information about the functions implemented can be found in the [user manual]()
 
 Please find the datasets employed in our paper in the folder [data](data/)
