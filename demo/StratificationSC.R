@@ -1,7 +1,7 @@
 rm(list = ls())
 
 
-library(readxl)  
+library(readxl)
 library(AMCBGeneUtils)
 library(tidyverse)
 
@@ -15,7 +15,7 @@ file_list <- setdiff(file_list,list.dirs(path=path,full.names = F))
 index<- str_detect(file_list
                    , pattern = "SC.+0[6|7]True.+")
 
-file_list <- file_list[index] 
+file_list <- file_list[index]
 
 
 for (i in file_list) {
@@ -37,7 +37,7 @@ CDpapers <- c("Lawrence2014","Martincorena2017"
 
 #----Nature_Lawrence 505 pages495-501(2014)
 Lawrence2014 <- read_excel(paste0(pseudoGT.dir
-                                        , "/Nature_Lawrence 505 pages495-501(2014).xlsx")
+                                        , "/Lawrence2014.xlsx")
                                   , sheet = 1, range = "A2:I262")
 Lawrence2014 <- Lawrence2014%>%
   dplyr::select(-3)
@@ -47,14 +47,14 @@ Lawrence2014 <- cbind(changeGeneId(Lawrence2014$gene)
 
 #----CELL_Martincorena  171 (2017).xlsx
 Martincorena2017  <- read_excel(paste0(pseudoGT.dir
-                                        , "/CELL_Martincorena  171 (2017).xlsx")
+                                        , "/Martincorena2017.xlsx")
                                  , sheet = 1)
 Martincorena2017 <- changeGeneId(Martincorena2017$Gene)
 
 
 #------Cell_Bailey_Vol 173 Issue 2 Pg 371-385.e18(2018)
 Bailey2018 <-read_excel(paste0(pseudoGT.dir
-                                    , "/Cell_Bailey_Vol 173 Issue 2 Pg 371-385.e18(2018).xlsx")
+                                    , "/Bailey2018.xlsx")
                              , sheet = 2, range = "A4:L743")
 
 Bailey2018 <- cbind(changeGeneId(Bailey2018$Gene)
@@ -65,7 +65,7 @@ BRCA$Bailey2018 <- Bailey2018%>%
 
 #-----Nature_Priestley Vol 575_7(2019)
 Priestley2019 <- read_excel(paste0(pseudoGT.dir
-                                          , "/Nature_Priestley Vol 575_7(2019).xlsx")
+                                          , "/Priestley2019.xlsx")
                                    , sheet = 1, range = "A1:L20071")
 Priestley2019 <- cbind(changeGeneId(Priestley2019$gene)
                               ,Priestley2019[,-3])
@@ -74,7 +74,7 @@ BRCA$Priestley2019 <- Priestley2019%>%
 
 #------Nature Genetics_Dietlein_Vol 52_pg208-218 (2020)
 Dietlein2020 <-read_excel(paste0(pseudoGT.dir
-                                    , "/Nature Genetics_Dietlein_Vol 52_pg208-218 (2020).xlsx")
+                                    , "/Dietlein2020.xlsx")
                              , sheet = 4, range = "A1:H828")
 
 Dietlein2020 <- cbind(changeGeneId(Dietlein2020$Gene)
@@ -85,7 +85,7 @@ BRCA$Dietlein2020 <- Dietlein2020%>%
 
 #------Nature_Rheinbay Vol 578, pages102-111 (2020)
 Rheinbay2020 <- read_excel(paste0(pseudoGT.dir
-                                         , "/Nature_Rheinbay Vol 578, pages102-111 (2020).xlsx")
+                                         , "/Rheinbay2020.xlsx")
                                   , sheet = 4)
 Rheinbay2020 <-  cbind(changeGeneId(Rheinbay2020$gene), Rheinbay2020[,-4])
 
@@ -99,7 +99,7 @@ genes <- rbind(SC_HER2_06True$res$CDinfer
 genes <- unique(genes$Ensembl.ID)
 genes <- changeGeneId(genes , from="Ensembl.ID")
 
-DriverCatalogues <- vector(mode="list", length = length(CDpapers)) 
+DriverCatalogues <- vector(mode="list", length = length(CDpapers))
 names(DriverCatalogues) <- CDpapers
 aux <- character(0)
 for (i in CDpapers) {
@@ -185,7 +185,7 @@ SC_VIM_HER.overlap <- SC_VIM_HER.union%>%
   dplyr::select(-rank)%>%
   mutate(inCGC = Ensembl.ID%in%CGC.driverNames$Ensembl.ID)%>%
   arrange(desc(abs(RelEffect)))
-  
+
 path <- "C:/Users/cifam001/OneDrive - University of South Australia/PhD UNISA/CancerDrivers/Causal Impact/"
 write.csv(SC_VIM_HER.overlap, file = paste0(path,"SC_VIM_HER.overlap.csv"))
 
